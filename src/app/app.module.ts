@@ -32,7 +32,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { CardboxComponent } from './cardbox/cardbox.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { SchedulerComponent } from './scheduler/scheduler.component';
-
+import { ChatBoxComponent } from './chat-box/chat-box.component';
+import { UserMsgComponent } from './chat-box/user-msg/user-msg.component';
+import { SystemReplyComponent } from './chat-box/system-reply/system-reply.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,10 @@ import { SchedulerComponent } from './scheduler/scheduler.component';
     ToolBarComponentComponent,
     AppointmentComponent,
     CardboxComponent,
-    SchedulerComponent
+    SchedulerComponent,
+    ChatBoxComponent,
+    UserMsgComponent,
+    SystemReplyComponent
   ],
   imports: [
     BrowserModule,
