@@ -1,3 +1,16 @@
+.container {
+    position: relative;
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+  
+  .box {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    background-color: lightblue;
+    position: absolute;
+    bottom: -100px; /* Initially positioned outside the view */
+  }
 .textindent-icon {
     width: 30px;
     position: relative;
@@ -1194,6 +1207,10 @@
     justify-content: flex-start;
     padding: 0 30px 30px
 }
+
+.clickable {
+    cursor: pointer; /* Changes the cursor to a hand icon */
+  }
 
 .need-quick-support {
     align-self: stretch;
