@@ -32,6 +32,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { CardboxComponent } from './cardbox/cardbox.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { SchedulerComponent } from './scheduler/scheduler.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -64,11 +65,9 @@ import { SchedulerComponent } from './scheduler/scheduler.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatProgressBarModule,
-    MatTabsModule
-  ],
-  exports: [
-    MatDatepickerModule, 
-    MatNativeDateModule 
+    MatTabsModule,
+    MatDividerModule,
+    MatInputModule 
   ],
   providers: [],
   bootstrap: [AppComponent],
