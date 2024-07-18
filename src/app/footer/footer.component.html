@@ -41,4 +41,4 @@
     </div>
 </div>
 
-<app-chat-box *ngIf="showChatbox"></app-chat-box>
+<app-chat-box *ngIf="showChatbox" (notifyParent)="onNotify($event)"></app-chat-box>
