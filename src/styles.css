@@ -14,13 +14,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
   }
   
   .mat-toolbar {
-    background-color: lightblue !important; /* Set toolbar background to white */
+    background-color: white !important; /* Set toolbar background to white */
     color: #000000 !important; /* Set toolbar text color to black */
   }
   
   .main-content {
     padding: 20px;
-    background-color: #ffffff; /* Set main content background to white */
+    background-color: #fff4fb; /* Set main content background to white */
     color: #000000 !important;
   }
   .mat-list-item{

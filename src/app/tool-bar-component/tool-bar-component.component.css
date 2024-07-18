@@ -32,3 +32,9 @@
   .mat-tab-label {
     color: green !important;
   }
+
+  .logo {
+    width: 100px;
+    height: 50px;
+    margin-right: 8px;
+  }
