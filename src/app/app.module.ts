@@ -38,6 +38,10 @@ import { SystemReplyComponent } from './chat-box/system-reply/system-reply.compo
 import {MatDividerModule} from '@angular/material/divider';
 
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { LiveAgentComponent } from './live-agent/live-agent.component';
+import { UserQuestionComponent } from './live-agent/user-question/user-question.component';
+import { AgentAnswerComponent } from './live-agent/agent-answer/agent-answer.component';
+import { FooterComponent } from './footer/footer.component'; // Import HttpClientModule
 import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
@@ -50,7 +54,11 @@ import { MatSelectModule } from '@angular/material/select';
     SchedulerComponent,
     ChatBoxComponent,
     UserMsgComponent,
-    SystemReplyComponent
+    SystemReplyComponent,
+    LiveAgentComponent,
+    UserQuestionComponent,
+    AgentAnswerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
