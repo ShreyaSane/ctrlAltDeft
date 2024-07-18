@@ -35,6 +35,9 @@ import { SchedulerComponent } from './scheduler/scheduler.component';
 import { ChatBoxComponent } from './chat-box/chat-box.component';
 import { UserMsgComponent } from './chat-box/user-msg/user-msg.component';
 import { SystemReplyComponent } from './chat-box/system-reply/system-reply.component';
+import {MatDividerModule} from '@angular/material/divider';
+
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
 @NgModule({
   declarations: [
@@ -69,11 +72,10 @@ import { SystemReplyComponent } from './chat-box/system-reply/system-reply.compo
     MatDatepickerModule,
     MatNativeDateModule,
     MatProgressBarModule,
-    MatTabsModule
-  ],
-  exports: [
-    MatDatepickerModule, 
-    MatNativeDateModule 
+    MatTabsModule,
+    MatDividerModule,
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -55,15 +55,17 @@
   <!-- Add your main content here -->
   <div class="main-content">
     <app-cardbox></app-cardbox>
-    <mat-grid-list cols="6" rowHeight="600px" [gutterSize]="'3%'">
-      <mat-grid-tile colspan="5" style="background-color: lightblue;margin-left: 15px;">
+   <mat-grid-list cols="6" rowHeight="600px">
+      <mat-grid-tile colspan="6" style="background-color: lightblue;margin-left: 15px;">
         <mat-tab-group >
-          <mat-tab label="Daily Routine" > <div class="tab-content"><mat-grid-list cols="1" ><mat-grid-tile >Daily Routine</mat-grid-tile></mat-grid-list></div></mat-tab>
-          <mat-tab label="Daily Routine" > <div class="tab-content"><mat-grid-list cols="1" ><mat-grid-tile >Daily Routine</mat-grid-tile></mat-grid-list></div></mat-tab>
-          <mat-tab label="Daily Routine" > <div class="tab-content"><mat-grid-list cols="1" ><mat-grid-tile >Daily Routine</mat-grid-tile></mat-grid-list></div></mat-tab>
+          <mat-tab label="Daily Routine" > <div class="tab-content"><app-scheduler style="width: 10%;"></app-scheduler></div></mat-tab>
+          <mat-tab label="DashBoard" > <div class="tab-content"><mat-grid-list cols="1" ><mat-grid-tile ><app-scheduler></app-scheduler></mat-grid-tile></mat-grid-list></div></mat-tab>
+          <mat-tab label="Daily Routine" > <div class="tab-content"><mat-grid-list cols="1" ><mat-grid-tile ><app-scheduler></app-scheduler></mat-grid-tile></mat-grid-list></div></mat-tab>
         </mat-tab-group>
       </mat-grid-tile>
-      <mat-grid-tile colspan="1" style="background-color: lightblue;"></mat-grid-tile>
-    </mat-grid-list>
+    </mat-grid-list> 
+    
+    
   </div>
+  
 </mat-sidenav-content>

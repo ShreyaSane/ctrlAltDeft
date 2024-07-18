@@ -371,6 +371,7 @@
     gap: 20px
 }
 
+.fra
 .ipad-pro-11-18 {
     width: 100%;
     position: relative;
@@ -383,4 +384,11 @@
     font-size: 36px;
     color: #c6007e;
     font-family: Roboto
+}
+
+.frame-div-user {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+
 }
