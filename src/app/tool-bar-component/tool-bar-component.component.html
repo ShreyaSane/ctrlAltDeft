@@ -16,21 +16,21 @@
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>My Toolbar</span>
+    <span><img src="assets/logo.svg" class="logo" ></span>
     <span class="spacer"></span>
     <mat-menu #languageMenu="matMenu" >
         <button mat-menu-item (click)="toggleLanguage('English')">
-          <img src="assets/flags/us.png" alt="English" class="flag" >
+          <img src="assets/flags/Flag.svg" alt="English" class="flag" >
           English
         </button>
         <button mat-menu-item (click)="toggleLanguage('French')">
-          <img src="assets/flags/us.png" alt="French" class="flag" >
+          <img src="assets/flags/Flag.svg" alt="French" class="flag" >
           French
         </button>
       </mat-menu>
 
       <button mat-icon-button [matMenuTriggerFor]="languageMenu" >
-        <img src="assets/flags/us.png" alt="English" class="flag">
+        <img src="assets/flags/Flag.svg" alt="English" class="flag">
         {{ selectedLanguage.toUpperCase() }}
       </button>
 
