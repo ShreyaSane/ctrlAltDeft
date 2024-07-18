@@ -30,7 +30,7 @@
     width: 90%;
     background-color: white;
     color: black;
-    height: 40%;
+    height: 70%;
   }
   
   mat-card-content h2 {
@@ -61,4 +61,58 @@
     font-size: 0.8em;
     margin-left: 10px;
     color: gray;
+  }
+
+  
+  .doctor-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .doctor-details {
+    margin-bottom: 10px;
+  }
+  
+  .more-doctors {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  * Styling for the mat-menu */
+  .doctor-menu {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    width: auto;
+  }
+  
+  .doctor-menu .mat-menu-item {
+    display: block;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  
+  .doctor-menu .mat-menu-item:hover {
+    background-color: #f1f1f1;
+  }
+
+  .custom-dialog-container .mat-dialog-container {
+    background-color: white;
   }

@@ -38,6 +38,7 @@ import { SystemReplyComponent } from './chat-box/system-reply/system-reply.compo
 import {MatDividerModule} from '@angular/material/divider';
 
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
     MatTabsModule,
     MatDividerModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
