@@ -37,7 +37,7 @@ import { UserMsgComponent } from './chat-box/user-msg/user-msg.component';
 import { SystemReplyComponent } from './chat-box/system-reply/system-reply.component';
 import {MatDividerModule} from '@angular/material/divider';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 import { LiveAgentComponent } from './live-agent/live-agent.component';
 import { UserQuestionComponent } from './live-agent/user-question/user-question.component';
 import { AgentAnswerComponent } from './live-agent/agent-answer/agent-answer.component';

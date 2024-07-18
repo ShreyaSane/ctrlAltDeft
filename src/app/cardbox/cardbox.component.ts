@@ -31,7 +31,7 @@ export class CardboxComponent implements OnInit {
 
   openAppointmentDialog(): void {
     const dialogRef = this.dialog.open(AppointmentComponent, {
-      width: '400px'
+      width: '400px',
     });
 
     dialogRef.afterClosed().subscribe(result => {
