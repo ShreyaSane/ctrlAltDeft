@@ -1,14 +1,14 @@
 <div style="width: 100%;padding-left: 2%;width:92%;">
 <div class=need-quick-support-parent style="width: 100%;"><b class=need-quick-support>Need quick support?</b>
     <div class=frame-parent36>
-        <div class=chatdots-parent><img alt="" class=chatdots-icon src=..\..\assets\ChatDots.svg>
+        <div class=chatdots-parent><img alt="" class=chatdots-icon src=..\..\assets\ChatDots.svg (click)="showChatBox()">
             <div class=daily-routine>
                 <p class=sandra-john-60-yrs>Chat with our expert
                 <p class=sandra-john-60-yrs>to get quick help!
             </div>
         </div>
         <div class=frame-child5></div>
-        <div class=chatdots-parent><img alt="" class=chatdots-icon src=..\..\assets\PhoneCall.svg>
+        <div class=chatdots-parent><img alt="" class=chatdots-icon src=..\..\assets\PhoneCall.svg >
             <div class=daily-routine>
                 <p class=sandra-john-60-yrs>Call for immediate
                 <p class=sandra-john-60-yrs>assistance
@@ -30,7 +30,9 @@
             </div>
         </div>
         <div class=frame-child5></div>
-        <div class=callbell-group><img alt="" class=callbell-icon src=..\..\assets\CallBell.svg> <img alt=""
+        <div class=callbell-group>
+            
+            <img alt="" class=callbell-icon src=..\..\assets\CallBell.svg> <img alt=""
                 class=headset-icon src=..\..\assets\Headset.svg>
             <div class=need-more-support-parent><b class=daily-routine>
                     <p class=sandra-john-60-yrs>Need more
@@ -40,3 +42,5 @@
     </div>
 </div>
 </div>
+
+<app-chat-box *ngIf="showChatbox"></app-chat-box>
