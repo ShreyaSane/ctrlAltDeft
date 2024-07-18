@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background-color: white;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: white;}
+.sidenav-container {
+    height: 100%;
+    background-color: #ffffff; /* Set background color to white */
+  }
+  
+  .sidenav {
+    width: 200px;
+    background-color: #f5f5f5; /* Slightly off-white for the sidenav */
+    color: #000000 !important;
+  }
+  
+  .mat-toolbar {
+    background-color: lightblue !important; /* Set toolbar background to white */
+    color: #000000 !important; /* Set toolbar text color to black */
+  }
+  
+  .main-content {
+    padding: 20px;
+    background-color: #ffffff; /* Set main content background to white */
+    color: #000000 !important;
+  }
+  .mat-list-item{
+    color: #000000 !important;
+  }
+  .spacer {
+    margin-left: 80%;
+  }
+  .flag {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }

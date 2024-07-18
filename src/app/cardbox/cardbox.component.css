@@ -1,0 +1,38 @@
+
+.grid-container {
+    height: 200px;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .language {
+    display: flex;
+    align-items: center;
+  }
+  
+  .language img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  .notification-icon {
+    cursor: pointer;
+  }
+  
+  .notification-count {
+    margin-left: 8px;
+  }
+  
+  mat-card {
+    width: 90%;
+    background-color: lightblue;
+    color: black;
+    height: 40%;
+  }
+  
+  mat-card-content h2 {
+    margin-top: 0;
+  }

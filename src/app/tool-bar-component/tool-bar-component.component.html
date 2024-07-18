@@ -1,0 +1,69 @@
+<mat-sidenav #drawer class="sidenav" mode="side" closed>
+  <mat-toolbar>
+    <button mat-icon-button (click)="drawer.close()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span>Menu</span>
+  </mat-toolbar>
+  <mat-nav-list>
+    <a mat-list-item href="#">Link 1</a>
+    <a mat-list-item href="#">Link 2</a>
+    <a mat-list-item href="#">Link 3</a>
+  </mat-nav-list>
+</mat-sidenav>
+<mat-sidenav-content>
+  <mat-toolbar>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My Toolbar</span>
+    <span class="spacer"></span>
+    <mat-menu #languageMenu="matMenu" >
+        <button mat-menu-item (click)="toggleLanguage('English')">
+          <img src="assets/flags/us.png" alt="English" class="flag" >
+          English
+        </button>
+        <button mat-menu-item (click)="toggleLanguage('French')">
+          <img src="assets/flags/us.png" alt="French" class="flag" >
+          French
+        </button>
+      </mat-menu>
+
+      <button mat-icon-button [matMenuTriggerFor]="languageMenu" >
+        <img src="assets/flags/us.png" alt="English" class="flag">
+        {{ selectedLanguage.toUpperCase() }}
+      </button>
+
+      <button mat-icon-button [matMenuTriggerFor]="notificationsMenu" matTooltip="All Notifications" style="margin-left: 4%;">
+        <mat-icon>notifications</mat-icon>
+        <span class="notification-count">{{ getNotificationCount() }}</span>
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #notificationsMenu="matMenu">
+        <ng-container *ngFor="let notification of notifications">
+          <button mat-menu-item (click)="hideNotification(notification.id)">
+            {{ notification.message }}
+          </button>
+        </ng-container>
+      </mat-menu>
+
+      <button mat-icon-button (click)="openProfileDialog()" matTooltip="Settings" style="margin-left: 1%;">
+        <mat-icon>settings</mat-icon>
+      </button>
+
+  </mat-toolbar>
+  <!-- Add your main content here -->
+  <div class="main-content">
+    <app-cardbox></app-cardbox>
+    <mat-grid-list cols="6" rowHeight="600px" [gutterSize]="'3%'">
+      <mat-grid-tile colspan="5" style="background-color: lightblue;margin-left: 15px;">
+        <mat-tab-group >
+          <mat-tab label="Daily Routine" > <div class="tab-content"><mat-grid-list cols="1" ><mat-grid-tile >Daily Routine</mat-grid-tile></mat-grid-list></div></mat-tab>
+          <mat-tab label="Daily Routine" > <div class="tab-content"><mat-grid-list cols="1" ><mat-grid-tile >Daily Routine</mat-grid-tile></mat-grid-list></div></mat-tab>
+          <mat-tab label="Daily Routine" > <div class="tab-content"><mat-grid-list cols="1" ><mat-grid-tile >Daily Routine</mat-grid-tile></mat-grid-list></div></mat-tab>
+        </mat-tab-group>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" style="background-color: lightblue;"></mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</mat-sidenav-content>

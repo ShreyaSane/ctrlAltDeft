@@ -1,0 +1,14 @@
+<mat-card>
+    <!-- <form [formGroup]="scheduleForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Select Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="selectedDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </form>
+  </mat-card>
+  <div *ngFor="let schedule of filteredSchedules">
+    <mat-card [ngClass]="{ 'selected': schedule.isSelected }" (click)="toggleScheduleSelection(schedule)">
+      {{ schedule.time }}: {{ schedule.description }}-->
+    </mat-card> 
