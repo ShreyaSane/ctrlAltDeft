@@ -95,7 +95,7 @@ export class SchedulerComponent implements OnChanges{
   }
 
   
-    completeActivity(): void {
+    completeActivity() {
       this.showUpdateRoutine = true;
       console.log(this.showUpdateRoutine);
     }
