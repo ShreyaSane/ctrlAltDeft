@@ -42,6 +42,7 @@ import { LiveAgentComponent } from './live-agent/live-agent.component';
 import { UserQuestionComponent } from './live-agent/user-question/user-question.component';
 import { AgentAnswerComponent } from './live-agent/agent-answer/agent-answer.component';
 import { FooterComponent } from './footer/footer.component'; // Import HttpClientModule
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { FooterComponent } from './footer/footer.component'; // Import HttpClien
     MatTabsModule,
     MatDividerModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
