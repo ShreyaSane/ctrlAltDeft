@@ -37,7 +37,11 @@ import { UserMsgComponent } from './chat-box/user-msg/user-msg.component';
 import { SystemReplyComponent } from './chat-box/system-reply/system-reply.component';
 import {MatDividerModule} from '@angular/material/divider';
 
-import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { HttpClientModule } from '@angular/common/http';
+import { LiveAgentComponent } from './live-agent/live-agent.component';
+import { UserQuestionComponent } from './live-agent/user-question/user-question.component';
+import { AgentAnswerComponent } from './live-agent/agent-answer/agent-answer.component';
+import { FooterComponent } from './footer/footer.component'; // Import HttpClientModule
 
 @NgModule({
   declarations: [
@@ -49,7 +53,11 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
     SchedulerComponent,
     ChatBoxComponent,
     UserMsgComponent,
-    SystemReplyComponent
+    SystemReplyComponent,
+    LiveAgentComponent,
+    UserQuestionComponent,
+    AgentAnswerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

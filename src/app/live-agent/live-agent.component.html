@@ -1,0 +1,54 @@
+<!doctype html>
+    <meta charset=utf-8>
+    <meta content="initial-scale=1,width=device-width" name=viewport>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel=stylesheet>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito Sans:wght@400&display=swap" rel=stylesheet>
+   
+    <div class=ipad-pro-11-18>
+        <div class=ipad-pro-11-18-child></div>
+        <div class=need-quick-support-parent><b class=need-quick-support>Need quick support?</b>
+            <div class=callbell-parent><img alt="" class=callbell-icon src=\..\..\assets\CallBell.svg>
+                <div class=frame-parent>
+                    <div class=chatdots-parent><img alt="" class=chatdots-icon src=\..\..\assets\ChatDots.svg> <b
+                            class=chat-with-our>Type your question here to get quick help!</b></div>
+                    <div class=frame-child></div><img alt="" class=chatdots-icon src=\..\..\assets\X.svg>
+                </div>
+                <div class=frame-group>
+                    <div class=group-wrapper><img alt="" class=frame-item src="\..\..\assets\Frame 584.svg"></div>
+                    <div class=frame-container>
+                        <div class=it-is-a-long-establi-wrapper>
+                            <div class=it-is-a-container><b>Hello!</b> <span>I hope you are doing well.</span></div>
+                        </div>
+                        <div class=it-is-a-long-establi-container>
+                            <div class=it-is-a-container>How can I assist you today?
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+               <div #dynamicComponentContainer></div>
+                <div class=frame-group>
+                    <div class=group-frame><img alt="" class=frame-item src="\..\..\assets\Group 22.png"></div>
+                    <div class=frame-parent3>
+                        <div class=it-is-a-long-establi-wrapper2>
+                            <div class=it-is-a1>
+                                <textarea  [(ngModel)]="inputValue"  id="prompt-textarea" tabindex="0" data-id="root"  rows="1" placeholder="Type your message here" style="height: 40px; overflow-y: hidden;"></textarea>
+                           <button (click)="createComponent()" >Send</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class=frame-parent4>
+                   
+                    <div class=fileplus-parent>
+                        <div class=live-agent>Create ticket</div>
+                    </div>
+                    
+                    <div class=chattext-parent>
+                        <div class=live-agent>Post on live forum</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
