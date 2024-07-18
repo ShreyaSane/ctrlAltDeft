@@ -9,7 +9,11 @@
 
         <div class=frame-parent3>
             <div class=it-is-a-long-establi-container>
-                <div class=it-is-a1><p>{{ inputValue }}</p></div>
+                <div class=it-is-a1  *ngFor="let faq of inputValue">
+                    <p style="font-weight: bold;">{{ faq.question}}</p>
+                    <p>{{ faq.answer}}</p>
+                </div>
+                
             </div>
         </div>
     </div>

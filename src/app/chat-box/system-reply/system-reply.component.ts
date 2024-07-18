@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SystemReplyComponent implements OnInit {
 
   constructor() { }
-  @Input() inputValue: string;
+  @Input() inputValue: any[];
   ngOnInit(): void {
   }
 

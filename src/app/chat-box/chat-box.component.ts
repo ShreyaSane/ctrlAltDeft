@@ -39,7 +39,7 @@ export class ChatBoxComponent implements OnInit {
     const componentRef = this.dynamicComponentContainer.createComponent(componentFactory);
     // Optionally, you can pass inputs to the component here, using componentRef.instance.inputProperty = value;
     
-    componentRef.instance.inputValue = JSON.stringify(replyData); // Pass the textarea value to the dynamic component
+    componentRef.instance.inputValue = replyData; // Pass the textarea value to the dynamic component
     
   }
 
