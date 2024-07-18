@@ -28,11 +28,37 @@
   
   mat-card {
     width: 90%;
-    background-color: lightblue;
+    background-color: white;
     color: black;
     height: 40%;
   }
   
   mat-card-content h2 {
     margin-top: 0;
+  }
+  .profile{
+    width: 100px;
+    height: 50px;
+    margin-right: 8px;
+  }
+
+  
+  
+  .profile-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  mat-card-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-age {
+    font-size: 0.8em;
+    margin-left: 10px;
+    color: gray;
   }

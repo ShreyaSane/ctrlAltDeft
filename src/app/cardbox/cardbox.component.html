@@ -1,19 +1,13 @@
 <mat-grid-list cols="3" rowHeight="fit"  class="grid-container">
     <mat-grid-tile>
-      <mat-card>
-        <img mat-card-image src="assets/profile.jpg" alt="Profile photo">
-        <mat-card-content>
-          <h2>{{ userName }}</h2>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card>
-        <mat-card-content>
-          <h2>Health Progress</h2>
-          <mat-progress-bar mode="determinate" [value]="healthProgress"></mat-progress-bar>
-          <span>{{ healthProgress }}%</span>
-        </mat-card-content>
+      <mat-card class="profile-card">
+        <mat-card-header style="padding-top: 2%;">
+          <div mat-card-avatar class="profile-photo" style="background-image: url('/assets/profile.svg');"></div>
+          <mat-card-title style="padding-top: 2%;">
+            Catherine Doe <span class="profile-age">85</span>
+          </mat-card-title>
+          <mat-card-subtitle style="padding-top: 2%;color: black;">Dementia Stage 4</mat-card-subtitle>
+        </mat-card-header>
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile>
