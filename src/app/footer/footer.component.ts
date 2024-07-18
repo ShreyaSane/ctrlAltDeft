@@ -16,4 +16,9 @@ export class FooterComponent implements OnInit {
     this.showChatbox = true;
   }
 
+  onNotify(message: string) {
+    console.log("received..");
+    this.showChatbox = false;
+  }
+
 }

@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, Injectable, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, ComponentFactoryResolver, EventEmitter, Injectable, OnInit, Output, ViewChild, ViewContainerRef } from '@angular/core';
 import { UserMsgComponent } from './user-msg/user-msg.component';
 import { SystemReplyComponent } from './system-reply/system-reply.component';
 import { HttpClient } from '@angular/common/http';
@@ -12,6 +12,13 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ChatBoxComponent implements OnInit {
+
+  @Output() notifyParent: EventEmitter<string> = new EventEmitter<string>();
+
+sendMessage() {
+  console.log("sending");
+  this.notifyParent.emit('Hello from Child!');
+}
 
   inputValue: string = '';
 
