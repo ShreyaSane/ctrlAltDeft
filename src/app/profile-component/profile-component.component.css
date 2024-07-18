@@ -1,0 +1,17 @@
+/* profile.component.css */
+.profile-dialog {
+    padding: 20px;
+  }
+  
+  /* Optional: Style form inputs */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Optional: Style buttons */
+  .profile-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }

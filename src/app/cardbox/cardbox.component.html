@@ -1,0 +1,27 @@
+<mat-grid-list cols="3" rowHeight="fit"  class="grid-container">
+    <mat-grid-tile>
+      <mat-card>
+        <img mat-card-image src="assets/profile.jpg" alt="Profile photo">
+        <mat-card-content>
+          <h2>{{ userName }}</h2>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <mat-card-content>
+          <h2>Health Progress</h2>
+          <mat-progress-bar mode="determinate" [value]="healthProgress"></mat-progress-bar>
+          <span>{{ healthProgress }}%</span>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <mat-card-content>
+          <h2>Schedule Appointment</h2>
+          <button mat-raised-button color="primary" (click)="openAppointmentDialog()">Schedule</button>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
