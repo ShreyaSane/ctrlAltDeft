@@ -1,6 +1,8 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ToolBarComponentComponent } from '../tool-bar-component/tool-bar-component.component';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
+import { UpdateRoutineComponent } from '../app/update-routine/update-routine.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-scheduler',
@@ -68,8 +70,9 @@ export class SchedulerComponent implements OnChanges{
     },
     // Add more schedule items as needed
   ];
+  showUpdateRoutine: boolean;
   
-  constructor(private toolbar :ToolBarComponentComponent ) { }
+  constructor(private toolbar :ToolBarComponentComponent, private dialog: MatDialog ) { }
 
   ngOnInit(): void {
     this.filterSchedules(new Date());
@@ -90,4 +93,11 @@ export class SchedulerComponent implements OnChanges{
     this.schedules = this.allSchedules.filter(schedule => schedule.date === formattedDate);
     console.log("formattedDate"+formattedDate);
   }
+
+  
+    completeActivity(): void {
+      this.showUpdateRoutine = true;
+      console.log(this.showUpdateRoutine);
+    }
+  
 }

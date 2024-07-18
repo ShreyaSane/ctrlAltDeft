@@ -10,6 +10,7 @@
       <mat-card-title>
         {{ schedule.date }} - {{ schedule.time }}
         <span class="task">Task: {{ schedule.tasks[0] }}</span>
+        <span> <button mat-flat-button (click)="completeActivity()">Complete</button></span>
       </mat-card-title>
     </mat-card-header>
     <mat-card-actions>
@@ -51,4 +52,5 @@
       </mat-card-content>
     </mat-card>
   </mat-card>
+  <update-routine *ngIf="showUpdateRoutine"></update-routine>
 </div>

@@ -44,6 +44,12 @@ import { AgentAnswerComponent } from './live-agent/agent-answer/agent-answer.com
 import { FooterComponent } from './footer/footer.component'; // Import HttpClientModule
 import { MatSelectModule } from '@angular/material/select';
 
+import { HealthReportComponent } from './app/dashboard/health-report/health-report.component';
+import { TotalAlertsComponent } from './app/dashboard/total-alerts/total-alerts.component';
+import { GeoFencingAlertsComponent } from './app/dashboard/geo-fencing-alerts/geo-fencing-alerts.component';
+import { RecordsComponent } from './app/dashboard/records/records.component';
+import { DashboardComponent } from './app/dashboard/dashboard.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +64,12 @@ import { MatSelectModule } from '@angular/material/select';
     LiveAgentComponent,
     UserQuestionComponent,
     AgentAnswerComponent,
-    FooterComponent
+    FooterComponent,
+    HealthReportComponent,
+    TotalAlertsComponent,
+    GeoFencingAlertsComponent,
+    RecordsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
