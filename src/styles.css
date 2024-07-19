@@ -33,3 +33,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     height: 30px;
     margin-right: 8px;
   }
+  
+.mat-tab-label-content {
+  color: black !important;
+}
+.mat-tab-label-active .mat-tab-label-content {
+  color: #c6007e !important;
+}

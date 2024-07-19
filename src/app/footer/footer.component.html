@@ -43,6 +43,4 @@
 </div>
 </div>
 
-<div class="container">
-<app-chat-box  [@slideUp]="state" class="box"  *ngIf="showChatbox"></app-chat-box>
-</div>
+<app-chat-box   *ngIf="showChatbox"  (notifyParent)="onNotify($event)"></app-chat-box>

@@ -73,3 +73,12 @@
   .mat-datepicker-toggle{
     color:red;
  }
+
+ .status-label {
+  padding: 10px;
+  margin: 5px 0;
+  color: white; /* Assuming a light text color for dark backgrounds */
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}

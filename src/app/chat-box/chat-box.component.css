@@ -1,3 +1,22 @@
+.input-container {
+    display: flex;
+    align-items: center; /* Vertically centers the textarea and button */
+  }
+  
+  .message-textarea {
+    height: 40px;
+    overflow-y: hidden;
+    width: 100%; /* Adjust this if needed */
+    max-width: 50%; /* Optional: Set a maximum width */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-right: 8px; /* Space between textarea and button */
+  }
+  
+  button {
+    border-radius: 8px; /* Ensure button corners match the textarea */
+  }
 .ipad-pro-11-18-child {
     position: absolute;
     top: 0;
@@ -328,15 +347,14 @@
     gap: 10px
 }
 
-.frame-parent4 {
+.frame-parent4{
     align-self: stretch;
     flex: 1;
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-start;
+    grid-gap: 8px;
     gap: 8px;
-    color: #fff
+    color: #fff;
+    justify-content: center;
 }
 
 .callbell-parent {
@@ -391,16 +409,129 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-    z-index: 1000; /* adjust as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
+    align-items: flex-end;
+}
   
   .overlay-content {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .chat.chattext-icon {
+    width: 24px;
+    position: relative;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0
+  }
+
+  .chat.it-is-a {
+    flex: 1;
+    position: relative;
+    line-height: 28px;
+    opacity: .chat.3;
+    mix-blend-mode: normal
+  }
+
+  .chat.paperplaneright-wrapper {
+    width: 44px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: 1px solid #c6007e;
+    box-sizing: border-box;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+
+  .chat.chattext-parent {
+    flex: 1;
+    border-radius: 26.chat.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #202224
+  }
+
+  .chat.microphone-wrapper {
+    width: 44px;
+    border-radius: 26.chat.5px;
+    background-color: #00b0b9;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 8px;
+    box-sizing: border-box
+  }
+
+  .chat.frame-child {
+    align-self: stretch;
+    width: 1px;
+    position: relative;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    opacity: .chat.1
+  }
+
+  .chat.line-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px
+  }
+
+  .chat.create {
+    position: relative;
+    letter-spacing: -.chat.11px;
+    line-height: 24px
+  }
+
+  .chat.fileplus-parent {
+    border-radius: 26.chat.5px;
+    background-color: #646464;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 10px
+  }
+
+  .chat.chattext-group {
+    border-radius: 26.chat.5px;
+    background-color: #c6007e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 10px
+  }
+
+  .chat.frame-parent {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    text-align: left;
+    font-size: 18px;
+    color: #fff;
+    font-family: Roboto
   }
