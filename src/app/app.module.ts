@@ -49,6 +49,7 @@ import { TotalAlertsComponent } from './app/dashboard/total-alerts/total-alerts.
 import { GeoFencingAlertsComponent } from './app/dashboard/geo-fencing-alerts/geo-fencing-alerts.component';
 import { RecordsComponent } from './app/dashboard/records/records.component';
 import { DashboardComponent } from './app/dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { DashboardComponent } from './app/dashboard/dashboard.component';
     TotalAlertsComponent,
     GeoFencingAlertsComponent,
     RecordsComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

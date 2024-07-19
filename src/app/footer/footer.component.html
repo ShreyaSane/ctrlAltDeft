@@ -1,28 +1,27 @@
-<div style="width: 100%;padding-left: 2%;width:92%;">
-<div class=need-quick-support-parent style="width: 100%;"><b class=need-quick-support>Need quick support?</b>
+<div class=need-quick-support-parent><b class=need-quick-support>Need quick support?</b>
     <div class=frame-parent36>
-        <div class=chatdots-parent><img alt="" class="chatdots-icon clickable" src=..\..\assets\ChatDots.svg (click)="showChatBox()">
+        <div class=chatdots-parent><img alt="" class=chatdots-icon src=..\..\assets\ChatDots.svg (click)="showChatBox()">
             <div class=daily-routine>
                 <p class=sandra-john-60-yrs>Chat with our expert
                 <p class=sandra-john-60-yrs>to get quick help!
             </div>
         </div>
         <div class=frame-child5></div>
-        <div class=chatdots-parent><img alt="" class="chatdots-icon" src=..\..\assets\PhoneCall.svg >
+        <div class=chatdots-parent><img alt="" class=chatdots-icon src=..\..\assets\PhoneCall.svg >
             <div class=daily-routine>
                 <p class=sandra-john-60-yrs>Call for immediate
                 <p class=sandra-john-60-yrs>assistance
             </div>
         </div>
         <div class=frame-child5></div>
-        <div class=chatdots-parent><img alt="" class="chatdots-icon" src=..\..\assets\UserSound.svg>
+        <div class=chatdots-parent><img alt="" class=chatdots-icon src=..\..\assets\UserSound.svg>
             <div class=daily-routine>
                 <p class=sandra-john-60-yrs>Quick connect with
                 <p class=sandra-john-60-yrs>family members
             </div>
         </div>
         <div class=frame-child5></div>
-        <div class=chatdots-parent><img alt="" class="callbell-icon" src=..\..\assets\CallBell.svg> <img alt=""
+        <div class=chatdots-parent><img alt="" class=callbell-icon src=..\..\assets\CallBell.svg> <img alt=""
                 class=chatdots-icon src=..\..\assets\BellSimpleRinging.svg>
             <div class=daily-routine>
                 <p class=sandra-john-60-yrs>Emergency alarm to
@@ -37,12 +36,9 @@
             <div class=need-more-support-parent><b class=daily-routine>
                     <p class=sandra-john-60-yrs>Need more
                     <p class=sandra-john-60-yrs>Support?
-                </b><img alt="" class="caretdown-icon2" src=..\..\assets\CaretDown.png></div>
+                </b><img alt="" class=caretdown-icon2 src=..\..\assets\CaretDown.png></div>
         </div>
     </div>
 </div>
-</div>
 
-<div class="container">
-<app-chat-box  [@slideUp]="state" class="box"  *ngIf="showChatbox"></app-chat-box>
-</div>
+<app-chat-box *ngIf="showChatbox" (notifyParent)="onNotify($event)"></app-chat-box>

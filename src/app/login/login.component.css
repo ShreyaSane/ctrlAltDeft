@@ -1,0 +1,352 @@
+.image-3-icon {
+    position: absolute;
+    top: 48px;
+    left: 52px;
+    border-radius: 20px;
+    width: 920px;
+    height: 600px;
+    object-fit: cover
+}
+
+.frame-child {
+    width: 232.1px;
+    position: relative;
+    height: 78.4px;
+    object-fit: cover
+}
+
+.group-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 30px;
+    z-index: 0
+}
+
+.login-to-account {
+    align-self: stretch;
+    position: relative;
+    line-height: 28px
+}
+
+.please-enter-your {
+    align-self: stretch;
+    position: relative;
+    font-size: 18px;
+    line-height: 28px;
+    opacity: .8;
+    mix-blend-mode: normal
+}
+
+.login-to-account-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    z-index: 1;
+    font-size: 36px
+}
+
+.input {
+    position: absolute;
+    height: 58.33%;
+    width: 100%;
+    top: 41.67%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 8px;
+    background-color: #f1f4f9;
+    border: 1px solid #d8d8d8;
+    box-sizing: border-box
+}
+
+.email-address {
+    position: absolute;
+    top: calc(50% - 48px);
+    left: 0;
+    line-height: 28px;
+    opacity: .8;
+    mix-blend-mode: normal
+}
+
+.esteban-schillergma {
+    position: absolute;
+    top: calc(50% + 8px);
+    left: 3.1%;
+    line-height: 28px;
+    color: #a6a6a6
+}
+
+.email {
+    width: 516px;
+    position: relative;
+    height: 96px;
+    z-index: 2;
+    text-align: left
+}
+
+.input1 {
+    position: absolute;
+    height: 37.84%;
+    width: 100%;
+    top: 27.03%;
+    right: 0;
+    bottom: 35.14%;
+    left: 0;
+    border-radius: 8px;
+    background-color: #f1f4f9;
+    border: 1px solid #d8d8d8;
+    box-sizing: border-box
+}
+
+.password-icon {
+    position: absolute;
+    height: 9.46%;
+    width: 31.78%;
+    top: 41.22%;
+    right: 65.12%;
+    bottom: 49.32%;
+    left: 3.1%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%
+}
+
+.password1 {
+    position: absolute;
+    top: calc(50% - 74px);
+    left: 0;
+    line-height: 28px;
+    opacity: .8;
+    mix-blend-mode: normal
+}
+
+.forget-password {
+    position: absolute;
+    top: calc(50% - 74px);
+    left: 72.09%;
+    line-height: 28px;
+    text-align: right;
+    opacity: .6;
+    mix-blend-mode: normal
+}
+
+.remember-password {
+    position: absolute;
+    top: calc(50% + 46px);
+    left: 6.98%;
+    line-height: 28px;
+    opacity: .6;
+    mix-blend-mode: normal
+}
+
+.check-icon {
+    position: absolute;
+    height: 16.22%;
+    width: 4.65%;
+    top: 81.08%;
+    right: 95.35%;
+    bottom: 2.7%;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover
+}
+
+.password {
+    width: 516px;
+    position: relative;
+    height: 148px;
+    z-index: 3;
+    text-align: left
+}
+
+.rectangle {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 48px;
+    background-color: #c6007e;
+    opacity: .9;
+    mix-blend-mode: normal
+}
+
+.sign-in {
+    position: absolute;
+    width: 15.31%;
+    top: calc(50% - 13px);
+    left: 42.34%;
+    letter-spacing: -.07px;
+    display: inline-block
+}
+
+.button-compose-message {
+    align-self: stretch;
+    position: relative;
+    height: 56px
+}
+
+.rectangle1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 48px;
+    background-color: #646464;
+    opacity: .9;
+    mix-blend-mode: normal
+}
+
+.sign-in1 {
+    position: absolute;
+    width: 48.84%;
+    top: calc(50% - 13.41px);
+    left: 25.58%;
+    letter-spacing: -.07px;
+    display: inline-block
+}
+
+.dont-have-an {
+    white-space: pre-wrap
+}
+
+.span {
+    text-decoration: underline;
+    color: #c6007e
+}
+
+.dont-have-an-container {
+    position: absolute;
+    top: calc(50% - 12.5px);
+    left: 0;
+    letter-spacing: -.06px;
+    font-weight: 600;
+    opacity: .65;
+    mix-blend-mode: normal
+}
+
+.create-account {
+    position: absolute;
+    top: calc(50% - 12.5px);
+    left: 60.25%;
+    text-decoration: underline;
+    letter-spacing: -.06px;
+    color: #c6007e
+}
+
+.create-new {
+    width: 322px;
+    position: relative;
+    height: 25px;
+    text-align: right;
+    font-size: 18px;
+    color: #202224
+}
+
+.button-compose-message-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    z-index: 4;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Nunito Sans'
+}
+
+.frame-item {
+    width: 661px;
+    position: absolute;
+    margin: 0 !important;
+    top: -13px;
+    left: -21px;
+    background-color: #fff;
+    height: 873px;
+    opacity: .8;
+    z-index: 5
+}
+
+.loti {
+    width: 300px;
+    position: absolute;
+    margin: 0 !important;
+    top: calc(50% - 103.7px);
+    height: 300px;
+    z-index: 6
+}
+
+.frame-parent {
+    position: absolute;
+    top: 398px;
+    left: calc(50% - 308px);
+    box-shadow: 0 16px 16px -8px rgba(198, 0, 126, .18), 0 4px 4px -4px #f9cbe8;
+    border-radius: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px;
+    gap: 30px
+}
+
+.dont-have-an1 {
+    align-self: stretch;
+    position: relative;
+    letter-spacing: -.06px;
+    font-weight: 600;
+    opacity: .65;
+    mix-blend-mode: normal
+}
+
+.dont-have-an2 {
+    align-self: stretch;
+    position: relative;
+    letter-spacing: -.06px;
+    font-weight: 600;
+    text-align: right;
+    opacity: .43;
+    mix-blend-mode: normal
+}
+
+.dont-have-an-accoun-parent {
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 162px);
+    width: 324px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Nunito Sans'
+}
+
+.ipad-pro-11-48 {
+    width: 100%;
+    position: relative;
+    background-color: #fff4fb;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    height: 1366px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 18px;
+    color: #202224;
+    font-family: Roboto
+}
