@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -23,6 +23,26 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class FooterComponent implements OnInit {
+
+  private _booleanValue: boolean;
+
+  @Input()
+  set booleanValueFromParent(value: boolean) {
+    this._booleanValue = value;
+    if(this._booleanValue == true)
+    {
+      console.log("efwef");
+      this.showChatbox = true;
+    }
+    // You can perform additional logic here if needed
+  }
+
+  get booleanValueFromParent(): boolean {
+    return this._booleanValue;
+  }
+
+
+  
 onNotifyNF() {
   console.log("received..");
   this.showNF = false;

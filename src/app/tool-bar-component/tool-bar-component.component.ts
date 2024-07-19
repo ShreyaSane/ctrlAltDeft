@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -7,6 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ProfileComponentComponent } from '../profile-component/profile-component.component';
 import { AppointmentComponent } from '../appointment/appointment.component';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
+import { FooterComponent } from '../footer/footer.component';
 
 interface Notification {
   id: number;
@@ -21,7 +22,10 @@ interface Notification {
 export class ToolBarComponentComponent implements OnInit {
 
   @Output() dateChange = new EventEmitter<Date>();
+  @Output() notifyParent= new EventEmitter<string>();
+  @ViewChild(FooterComponent) childComponent: FooterComponent;
   constructor(private breakpointObserver: BreakpointObserver , private snackBar: MatSnackBar , private dialog: MatDialog ){}
+  
 
   ngOnInit(): void {
   }
@@ -31,6 +35,8 @@ export class ToolBarComponentComponent implements OnInit {
 selectedLanguage: string = 'English'; // Default to English
 userName = 'John Doe';
 healthProgress = 75; // Example health progress value
+showChatbox = false;
+messageToChild: string = 'OPEN';
 
 notifications: Notification[] = [
   { id: 1, message: 'Notification 1' },
@@ -110,4 +116,18 @@ isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Ha
     }
   }
 
+  showChatBox(){
+    this.showChatbox = true;
+  }
+
+  onNotify(message: string) {
+    console.log("received..");
+    this.showChatbox = false;
+  }
+
+  handleClick(event: MouseEvent) {
+    console.log("hello");
+    this.childComponent.booleanValueFromParent = true;
+    this.showChatbox = false;
+  }
 }

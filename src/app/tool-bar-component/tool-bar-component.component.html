@@ -16,7 +16,7 @@
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span><img src="assets/logo.svg" class="logo" ></span>
+    <span><img src="assets/logo.svg" class="logo"  (click)="showChatBox()"></span>
     <span class="spacer"></span>
     <mat-menu #languageMenu="matMenu" >
         <button mat-menu-item (click)="toggleLanguage('English')">
@@ -54,12 +54,29 @@
   </mat-toolbar>
   <!-- Add your main content here -->
   <div class="main-content">
+    <div class=frame-parent *ngIf="showChatbox" (click)="handleClick($event)">
+    <div class=warning-parent><img alt="" class="warning-icon" src="assets/Warning.svg">
+      <div class=sandras-heart-rate-has-signif-wrapper>
+        <div class=sandras-heart-rate-container>
+          <p class=sandras-heart-rate-has-signif><b>Sandra's heart rate has significantly increased during physical activity.</b>
+          <p class=sandras-heart-rate-has-signif>Please check on her immediately to ensure her safety.
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class=frame-group>
+      <div class=wrapper><b class=b>4</b></div>
+      <div class=critical-alerts-wrapper>
+        <div class=b>Critical Alerts</div>
+      </div>
+    </div>
     <app-cardbox></app-cardbox>
    <mat-grid-list cols="6"  style="width: 96.7%;">
       <mat-grid-tile colspan="6" style="background-color: #fff4fb;margin-left: 15px; color: black;">
         <mat-tab-group >
           <mat-tab label="Daily Routine" > <div class="tab-content"><app-scheduler style="width: 10%;"></app-scheduler></div></mat-tab>
           <mat-tab label="DashBoard" > <div class="tab-content"><dashboard-new></dashboard-new></div></mat-tab>
+          <mat-tab label="Daily Routine" > <div class="tab-content"><update-routine></update-routine></div></mat-tab>
         </mat-tab-group>
       </mat-grid-tile>
     </mat-grid-list> 
