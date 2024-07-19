@@ -1,58 +1,209 @@
-<div class="scheduler">
-  <mat-form-field appearance="fill">
-    <mat-label>Choose a date</mat-label>
-    <input  matInput [matDatepicker]="picker" (dateChange)="onDateChange($event)">
-    <mat-datepicker-toggle  matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker  #picker></mat-datepicker>
-  </mat-form-field>
-  <mat-card *ngFor="let schedule of schedules; let i = index" class="schedule-card">
-    <mat-card-header>
-      <mat-card-title>
-        {{ schedule.date }} - {{ schedule.time }}
-        <span class="task">Task: {{ schedule.tasks[0] }}</span>
-        <span><div class="partially-completed-parent"><div  class="status-label class=partially-completed">
-          {{ schedule.label }}
-        </div></div></span>
-      </mat-card-title>
-    </mat-card-header>
-    <mat-card-actions>
-      <button mat-icon-button (click)="schedule.expanded = !schedule.expanded">
-        <mat-icon>{{ schedule.expanded ? 'expand_less' : 'expand_more' }}</mat-icon>
-      </button>
-    </mat-card-actions>
-    <mat-card *ngIf="schedule.expanded" class="expanded-card">
-      <mat-card-header>
-        <mat-card-title>Schedule Details</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <div *ngFor="let detail of schedule.details" class="detail-item">
-          <div class="detail-activity">
-            <p>{{ detail.activity }}</p>
+<div class=rectangle-parent>
+  <div class=frame-inner></div>
+  <div class=rectangle-div></div>
+  <div class=frame-parent3>
+      <div class=frame-parent4>
+          <div class=am-parent>
+              <div class=daily-routine>11:00 AM</div><b class=b3>-</b>
+              <div class=daily-routine>12:00 PM</div>
           </div>
-          <div class="detail-tip">
-            <!-- <hr class="vertical-hr"> -->
-            <p><strong>Tip:</strong> {{ detail.tip }}</p>
-            <p><a href="{{ detail.youtubeLink }}" target="_blank">Watch on YouTube</a></p>
+          <div class=expand-routine-parent>
+              <div class=daily-routine>Expand Routine</div><img alt="" class=gearsix-icon src="assets/PlusCircle.svg"></div>
+      </div>
+      <div class=frame-parent5>
+          <div class=physical-activity-parent><b class=daily-routine>Physical Activity</b>
+              <div class=gentle-stretching-exercises>Gentle stretching exercises or a short walk</div>
           </div>
-          <hr class="horizontal-hr">
-        </div>
-        <!-- <hr class="horizontal-hr"> -->
-        <mat-card class="suggest-section">
-          <h3>Suggestions</h3>
-          <div *ngFor="let suggestion of schedule.suggestions" class="detail-item">
-            <div class="detail-activity">
-              <p>{{ suggestion.activity }}</p>
-            </div>
-            <div class="detail-tip">
-              <!-- <hr class="vertical-hr"> -->
-              <p><strong>Tip:</strong> {{ suggestion.tip }}</p>
-              <p><a href="{{ suggestion.youtubeLink }}" target="_blank">Watch on YouTube</a></p>
-            </div>
-            <!-- <hr class="horizontal-hr"> -->
+          <div class=filetext-parent><img alt="" class=gearsix-icon src="assets/FileText.svg">
+              <div class=daily-routine>Activity chart</div>
           </div>
-        </mat-card>
-      </mat-card-content>
-    </mat-card>
-  </mat-card>
-  <update-routine *ngIf="showUpdateRoutine"></update-routine>
+      </div>
+      <div class=frame-wrapper>
+          <div class=frame-parent6>
+              <div class=frame-parent7>
+                  <div class=neck-stretch-parent><b class=sandra-john-60-container>Neck Stretch</b>
+                      <div class=slowly-tilt-your>Slowly tilt your head to one side, hold, and then to the other side.</div>
+                  </div>
+                  <div class=frame-parent8>
+                      <div class=image-1-parent><img alt="" class=image-1-icon src="assets/image 1.png">
+                          <div class=daily-routine>Exercise Demo 1</div>
+                          <div class=daily-routine>Exercise Demo 2</div>
+                      </div><img alt="" class=image-1-icon src="assets/image 1.png"></div>
+              </div>
+              <div class=line-div></div>
+              <div class=frame-parent7>
+                  <div class=neck-stretch-parent><b class=sandra-john-60-container>Shoulder Rolls</b>
+                      <div class=slowly-tilt-your>Roll your shoulders forward in a circular motion and then backward.</div>
+                  </div>
+                  <div class=frame-parent8>
+                      <div class=image-1-parent><img alt="" class=image-1-icon src="assets/image 1.png">
+                          <div class=daily-routine>Exercise Demo 1</div>
+                          <div class=daily-routine>Exercise Demo 2</div>
+                      </div><img alt="" class=image-1-icon src="assets/image 1.png"></div>
+              </div>
+              <div class=line-div></div>
+              <div class=frame-parent7>
+                  <div class=neck-stretch-parent><b class=sandra-john-60-container>Arm Raises</b>
+                      <div class=slowly-tilt-your>Raise your arms above your head and then lower them back down.</div>
+                  </div>
+                  <div class=frame-parent8>
+                      <div class=image-1-parent><img alt="" class=image-1-icon src="assets/image 1.png">
+                          <div class=daily-routine>Exercise Demo 1</div>
+                          <div class=daily-routine>Exercise Demo 2</div>
+                      </div><img alt="" class=image-1-icon src="assets/image 1.png"></div>
+              </div>
+              <div class=line-div></div>
+              <div class=frame-parent7>
+                  <div class=neck-stretch-parent><b class=sandra-john-60-container>Leg Extensions</b>
+                      <div class=sit-on-a>Sit on a chair and slowly extend one leg out straight, hold, and then lower it back down. Repeat with the other leg.</div>
+                  </div>
+                  <div class=frame-parent8>
+                      <div class=image-1-parent><img alt="" class=image-1-icon src="assets/image 1.png">
+                          <div class=daily-routine>Exercise Demo 1</div>
+                          <div class=daily-routine>Exercise Demo 2</div>
+                      </div><img alt="" class=image-1-icon src="assets/image 1.png"></div>
+              </div>
+              <div class=line-div></div>
+              <div class=frame-parent7>
+                  <div class=neck-stretch-parent><b class=sandra-john-60-container>Finger Stretches</b>
+                      <div class=sit-on-a>Open and close your hands to stretch your fingers.</div>
+                  </div>
+                  <div class=frame-parent8>
+                      <div class=image-1-parent><img alt="" class=image-1-icon src="assets/image 1.png">
+                          <div class=daily-routine>Exercise Demo 1</div>
+                          <div class=daily-routine>Exercise Demo 2</div>
+                      </div><img alt="" class=image-1-icon src="assets/image 1.png"></div>
+              </div>
+          </div>
+      </div>
+      <div class=line-parent>
+          <div class=line-div></div>
+          <div class=frame-parent17>
+              <div class=neck-stretch-parent>
+                  <div class=walking>Walking</div>
+                  <div class=health-progress><span>Minimum </span><b>30min</b> <span>walk</span></div>
+              </div>
+              <div class=frame-child5></div>
+              <div class=activity-tips-gentle-walks-in-parent>
+                  <div class=activity-tips-gentle-container>
+                      <p class=sandra-john-60-yrs><b>Activity tips:</b>
+                          <p class=sandra-john-60-yrs>Gentle walks in a safe environment, such as a park or a quiet neighbourhood.</div>
+                  <div class=image-1-parent3><img alt="" class=image-1-icon src="assets/image 1.png">
+                      <div class=daily-routine>Walk Demo 1</div>
+                      <div class=daily-routine>Walk Demo 2</div>
+                  </div>
+                  <div class=frame-parent18>
+                      <div class=frame-parent19>
+                          <div class=image-1-parent><img alt="" class=image-1-icon src="assets/image 1.png">
+                              <div class=daily-routine>Exercise Demo 1</div>
+                              <div class=daily-routine>Exercise Demo 2</div>
+                          </div><img alt="" class=image-1-icon src="assets/image 1.png"></div>
+                      <div class=frame-parent19>
+                          <div class=image-1-parent><img alt="" class=image-1-icon src="../../assets/image 1.png">
+                              <div class=daily-routine>Exercise Demo 1</div>
+                              <div class=daily-routine>Exercise Demo 2</div>
+                          </div><img alt="" class=image-1-icon src="assets/image 1.png"></div>
+                  </div>
+                  <div class=ai-wrapper><img alt="" class=ai-icon src=AI.svg></div>
+              </div>
+          </div>
+          <div class=line-div></div>
+          <div class=frame-parent21>
+              <div class=neck-stretch-parent>
+                  <div class=chair-exercises>Chair Exercises</div>
+                  <div class=sandra-john-60-container><span>Minimum </span><b>30min</b> <span>walk</span></div>
+                  <div class=exercise-list-parent><b class=sandra-john-60-container>Exercise list</b> <img alt="" class=gearsix-icon src=CaretDown.svg></div>
+              </div>
+              <div class=frame-child5></div>
+              <div class=activity-tips-simple-seated-e-parent>
+                  <div class=activity-tips-simple-container>
+                      <p class=sandra-john-60-yrs><b>Activity tips:</b>
+                          <p class=sandra-john-60-yrs>Simple seated exercises to improve flexibility and strength.</div>
+                  <div class=ai-container><img alt="" class=ai-icon src=AI.svg></div>
+                  <div class=image-1-parent6><img alt="" class=image-1-icon src="assets/image 1.png">
+                      <div class=daily-routine>Walk Demo 1</div>
+                      <div class=daily-routine>Walk Demo 2</div>
+                  </div>
+              </div>
+          </div>
+          <div class=frame-parent22>
+              <div class=frame-parent23>
+                  <div class=frame-parent24>
+                      <div class=suggested-gentle-physical-acti-parent>
+                          <div class=daily-routine>Suggested gentle physical activities</div>
+                          <div class=these-activities-can>These activities can help improve flexibility, strength, and overall well-being for dementia patients, while being gentle and easy to perform.</div>
+                      </div><b class=predication><p class=sandra-john-60-yrs>90%<p class=predication1>Predication</b>
+                      <div class=ai-frame><img alt="" class=ai-icon2 src=AI.svg></div>
+                      <div class=frame-child8></div>
+                      <div class=frame-child9></div>
+                  </div>
+                  <div class=line-div></div>
+                  <div class=frame-parent25>
+                      <div class=frame-parent26>
+                          <div class=gardening-parent>
+                              <div class=gardening>Gardening</div>
+                              <div class=minimum-10min><span>Minimum </span><b>10min</b></div><img alt="" class=info-icon src="assets/Info.svg"></div>
+                          <div class=frame-child5></div>
+                          <div class=health-progress>
+                              <p class=sandra-john-60-yrs><b>Activity tips:</b>
+                                  <p class=sandra-john-60-yrs>Light gardening tasks like planting flowers or watering plants.</div>
+                      </div>
+                      <div class=frame-parent27>
+                          <div class=image-1-parent><img alt="" class=image-1-icon src="assets/image 1.png">
+                              <div class=daily-routine>Exercise Demo 1</div>
+                              <div class=daily-routine>Exercise Demo 2</div>
+                          </div><img alt="" class=image-1-icon src="assets/image 1.png"></div>
+                  </div>
+                  <div class=line-div></div>
+                  <div class=frame-parent25>
+                      <div class=frame-parent26>
+                          <div class=gardening-parent>
+                              <div class=gardening>Dancing</div>
+                              <div class=minimum-10min><span>Minimum </span><b>20min</b></div><img alt="" class=info-icon1 src="assets/Info.svg"></div>
+                          <div class=frame-child5></div>
+                          <div class=health-progress>
+                              <p class=sandra-john-60-yrs><b>Activity tips:</b>
+                                  <p class=sandra-john-60-yrs>Slow, rhythmic dancing to familiar music.</div>
+                      </div>
+                      <div class=frame-parent27>
+                          <div class=image-1-parent><img alt="" class=image-1-icon src="assets/image 1.png">
+                              <div class=daily-routine>Exercise Demo 1</div>
+                              <div class=daily-routine>Exercise Demo 2</div>
+                          </div><img alt="" class=image-1-icon src="../../assets/image 1.png"></div>
+                  </div>
+                  <div class=frame-parent31>
+                      <div class=smoothies-parent>
+                          <div class=walking>Smoothies</div>
+                          <div class=glass>1 glass</div><img alt="" class=gearsix-icon src="assets/Info.svg"></div>
+                      <div class=sit-on-a>Blended with fruits, vegetables, and a protein source like Greek yogurt or protein powder.</div>
+                  </div>
+                  <div class=line-div></div>
+                  <div class=frame-parent25>
+                      <div class=frame-parent26>
+                          <div class=gardening-parent>
+                              <div class=gardening>Yoga</div>
+                              <div class=minimum-10min><span>Minimum </span><b>30min</b></div><img alt="" class=info-icon3 src="assets/Info.svg"></div>
+                          <div class=frame-child5></div>
+                          <div class=activity-tips-adapted-container>
+                              <p class=sandra-john-60-yrs><b>Activity tips:</b>
+                                  <p class=sandra-john-60-yrs>Adapted yoga routines focusing on gentle movements and breathing exercises.</div>
+                      </div>
+                      <div class=frame-parent27>
+                          <div class=image-1-parent><img alt="" class=image-1-icon src="assets/image 1.png">
+                              <div class=daily-routine>Exercise Demo 1</div>
+                              <div class=daily-routine>Exercise Demo 2</div>
+                          </div><img alt="" class=image-1-icon src="assets/image 1.png"></div>
+                  </div>
+              </div>
+              <div class=frame-parent35>
+                  <div class=arrowsclockwise-parent><img alt="" class=gearsix-icon src="assets/ArrowsClockwise.svg">
+                      <div class=sandra-john-60-container>Suggest more</div>
+                  </div>
+                  <div class=arrowsclockwise-parent><img alt="" class=gearsix-icon src="assets/StackPlus.svg">
+                      <div class=sandra-john-60-container>Add in the schedule</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>

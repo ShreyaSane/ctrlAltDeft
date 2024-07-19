@@ -509,6 +509,16 @@
   padding: 0 20px
 }
 
+.daily-routine-wrapper button {
+  BACKGROUND: NONE;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border-bottom: 2px solid;
+  color: #c6007e;
+}
+
 .tabs-child {
   align-self: stretch;
   position: relative;
@@ -1512,3 +1522,4 @@
   color: #000;
   font-family: Roboto
 }
+

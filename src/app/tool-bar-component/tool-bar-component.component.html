@@ -1,87 +1,77 @@
-<mat-sidenav #drawer class="sidenav" mode="side" closed>
-  <mat-toolbar>
-    <button mat-icon-button (click)="drawer.close()">
-      <mat-icon>arrow_back</mat-icon>
-    </button>
-    <span>Menu</span>
-  </mat-toolbar>
-  <mat-nav-list>
-    <a mat-list-item href="#">Edit Patient's routine</a>
-    <a mat-list-item href="#">Add special Event</a>
-    <a mat-list-item href="../../assets/lsb.pdf" target="_blank">View Life Story Book</a>
-  </mat-nav-list>
-</mat-sidenav>
-<mat-sidenav-content>
-  <mat-toolbar>
-    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span><img src="assets/logo.svg" class="logo"  (click)="showChatBox()"></span>
-    <span class="spacer"></span>
-    <mat-menu #languageMenu="matMenu" >
-        <button mat-menu-item (click)="toggleLanguage('English')">
-          <img src="assets/flags/Flag.svg" alt="English" class="flag" >
-          English
-        </button>
-        <button mat-menu-item (click)="toggleLanguage('French')">
-          <img src="assets/flags/Flag.svg" alt="French" class="flag" >
-          French
-        </button>
-      </mat-menu>
 
-      <button mat-icon-button [matMenuTriggerFor]="languageMenu" >
-        <img src="assets/flags/Flag.svg" alt="English" class="flag">
-        {{ selectedLanguage.toUpperCase() }}
-      </button>
-
-      <button mat-icon-button [matMenuTriggerFor]="notificationsMenu" matTooltip="All Notifications" style="margin-left: 4%;">
-        <mat-icon>notifications</mat-icon>
-        <span class="notification-count">{{ getNotificationCount() }}</span>
-        <mat-icon>arrow_drop_down</mat-icon>
-      </button>
-      <mat-menu #notificationsMenu="matMenu">
-        <ng-container *ngFor="let notification of notifications">
-          <button mat-menu-item (click)="hideNotification(notification.id)">
-            {{ notification.message }}
-          </button>
-        </ng-container>
-      </mat-menu>
-
-      <button mat-icon-button (click)="openProfileDialog()" matTooltip="Settings" style="margin-left: 1%;">
-        <mat-icon>settings</mat-icon>
-      </button>
-
-  </mat-toolbar>
+<div class=navigation-top-bar-1>
+  <div class=textindent-parent><img alt="" class=textindent-icon src="../../assets/TextIndent.svg"> <img alt="" class=frame-child src="../../assets/Group 22.svg"></div>
+  <div class=search>
+      <div class=bg></div>
+      <div class=search1>Search</div><img alt="" class=search-icon src="../../assets/search.svg"></div>
+  <div class=frame-parent>
+      <div class=flag-parent><img alt="" class=flag-icon src="../../assets/flags/Flag.svg">
+          <div class=english-parent>
+              <div class=english>English</div><img alt="" class=caretdown-icon src="../../assets/CaretDown.svg"></div>
+      </div>
+      <div class=icon><img alt="" class=icon1 src="../../assets/icon.png"> <img alt="" class=bellringing-icon src="../../assets/BellRinging.svg">
+          <div class=oval-parent><img alt="" class=oval-icon src="../../assets/Oval.svg"> <img alt="" class=oval-icon1 src="../../assets/Oval.svg"> <b class=b>6</b></div>
+      </div>
+      <div class=man-438081-960-720-parent><img alt="" class=man-438081-960-720-icon src="../../assets/man-438081_960_720.png"> <img alt="" class=caretdown-icon src="../../assets/CaretDown.svg"></div><img alt="" class=gearsix-icon src="../../assets/GearSix.svg"></div>
+  <div class=div></div>
+</div>
+<div class=frame-group>
+  <div class=man-438081-960-720-group><img alt="" class=man-438081-960-720-icon1 src="../../assets/man-438081_960_720.png">
+      <div class=sandra-john-60-yrs-dementia-s-wrapper>
+          <div class=sandra-john-60-container>
+              <p class=sandra-john-60-yrs><span class=sandra-john><b class=sandra-john1>Sandra John</b> </span><span><span class=sandra-john>, </span><span>60 yrs</span></span>
+                  <p class=sandra-john-60-yrs><span><span>Dementia stage 4</span></span>
+          </div>
+      </div><img alt="" class=caretdown-icon2 src="../../assets/CaretDown.png"></div>
+  <div class=frame-container>
+      <div class=frame-div>
+          <div class=dr-john-doe-15-yrs-experien-wrapper>
+              <div class=sandra-john-60-container><span class=dr-john-doe><b>Dr. John Doe </b></span><span class=yrs-experience><span class=dr-john-doe></span> <span>/ 15 yrs experience</span></span>
+              </div>
+          </div>
+          <div class=view-3-more-doctor-parent>
+              <div class=sandra-john-60-container>View 3 more doctor</div><img alt="" class=caretdown-icon src="../../assets/CaretDown.svg"></div>
+      </div>
+      <div class=calendarcheck-parent><img alt="" class=gearsix-icon src="../../assets/CalendarCheck.svg">
+          <div class=appointment>Appointment</div>
+      </div>
+  </div>
+  <div class=frame-parent1>
+      <div class=dr-john-doe-15-yrs-experien-wrapper><b class=sandra-john-60-container>4</b></div>
+      <div class=critical-alerts-wrapper>
+          <div class=sandra-john-60-container>Critical Alerts</div>
+      </div>
+  </div>
+  <div class=frame-parent2>
+      <div class=group-parent><img alt="" class=frame-item src="../../assets/Group 422.svg"> <b class=b2>75%</b></div>
+      <div class=health-progress>Health progress</div><img alt="" class=caretdown-icon src="../../assets/CaretDown.svg"></div>
+</div>
   <!-- Add your main content here -->
   <div class="main-content">
-    <div class=frame-parent *ngIf="showChatbox" (click)="handleClick($event)">
-    <div class=warning-parent><img alt="" class="warning-icon" src="assets/Warning.svg">
-      <div class=sandras-heart-rate-has-signif-wrapper>
-        <div class=sandras-heart-rate-container>
-          <p class=sandras-heart-rate-has-signif><b>Sandra's heart rate has significantly increased during physical activity.</b>
-          <p class=sandras-heart-rate-has-signif>Please check on her immediately to ensure her safety.
-        </div>
-      </div>
-    </div>
-    </div>
-    <div class=frame-group>
-      <div class=wrapper><b class=b>4</b></div>
-      <div class=critical-alerts-wrapper>
-        <div class=b>Critical Alerts</div>
-      </div>
-    </div>
-    <app-cardbox></app-cardbox>
-   <mat-grid-list cols="6"  style="width: 96.7%;">
+   
+   <!-- <mat-grid-list cols="6"  style="width: 96.7%;">
+>>>>>>> Stashed changes
       <mat-grid-tile colspan="6" style="background-color: #fff4fb;margin-left: 15px; color: black;">
         <mat-tab-group >
-          <mat-tab label="Daily Routine" > <div class="tab-content"><app-scheduler style="width: 10%;"></app-scheduler></div></mat-tab>
-          <mat-tab label="DashBoard" > <div class="tab-content"><dashboard-new></dashboard-new></div></mat-tab>
+          <mat-tab label="Daily Routine" > <app-scheduler style="width: 10%;"></app-scheduler></mat-tab>
+          <mat-tab label="DashBoard" > <dashboard-new></dashboard-new></mat-tab>
         </mat-tab-group>
       </mat-grid-tile>
-    </mat-grid-list> 
+    </mat-grid-list>  -->
     
-    
+    <div class=tabs-parent>
+      
+          <div class=daily-routine-wrapper ><b ><button (click)="clickDailyRoutine()" [ngStyle]="getStyles()"> Daily Routine</button> </b></div>
+          <div class=tabs-child></div>
+      
+      <div class=tabs1>
+          <div class=daily-routine-wrapper>
+              <div><button (click)="clickDashboard()" [ngStyle]="getStyles()"> Dashboard</button></div>
+          </div>
+          <div class=tabs-item></div>
+      </div>      
+  </div>
+  <app-scheduler *ngIf="showDailyRoutine" style="width: 10%;"></app-scheduler>
+  <dashboard-new *ngIf="showDashaboard"></dashboard-new>
   </div>
   <app-footer></app-footer>
-  
-</mat-sidenav-content>

@@ -1,0 +1,158 @@
+.ipad-pro-11-43-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #5b003a;
+    width: 1024px;
+    height: 1640px;
+    opacity: .3
+}
+
+.phonecall-icon {
+    width: 60px;
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0
+}
+
+.calling-for-immediate {
+    position: relative;
+    line-height: 28px
+}
+
+.phonecall-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0;
+    gap: 20px
+}
+
+.frame-child {
+    width: 513px;
+    position: relative;
+    height: 514px;
+    object-fit: cover
+}
+
+.group-parent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 20px;
+    color: #646464
+}
+
+.icon-sound {
+    width: 32px;
+    position: relative;
+    height: 32px;
+    overflow: hidden;
+    flex-shrink: 0
+}
+
+.volume {
+    width: 62px;
+    border-radius: 30px;
+    background-color: #d8d8d8;
+    height: 62px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box
+}
+
+.icon-closed {
+    width: 40px;
+    position: relative;
+    height: 40px;
+    overflow: hidden;
+    flex-shrink: 0
+}
+
+.closed-meet {
+    width: 82px;
+    border-radius: 62px;
+    background-color: #c60000;
+    height: 82px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box
+}
+
+.share-screen-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px
+}
+
+.volume-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0
+}
+
+.frame-parent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff4fb;
+    width: 1024px;
+    height: 1002px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+    box-sizing: border-box;
+    gap: 20px
+}
+
+.ipad-pro-11-43 {
+    width: 100%;
+    position: relative;
+    background-color: #fff4fb;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    height: 1366px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 32px;
+    color: #c6007e;
+    font-family: Roboto
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+  
+  .overlay-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }

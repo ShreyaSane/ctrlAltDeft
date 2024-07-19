@@ -24,6 +24,9 @@ export class ToolBarComponentComponent implements OnInit {
   @Output() dateChange = new EventEmitter<Date>();
   @Output() notifyParent= new EventEmitter<string>();
   @ViewChild(FooterComponent) childComponent: FooterComponent;
+  showDailyRoutine: boolean = true;
+  showDashaboard: boolean;
+
   constructor(private breakpointObserver: BreakpointObserver , private snackBar: MatSnackBar , private dialog: MatDialog ){}
   
 
@@ -130,4 +133,27 @@ isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Ha
     this.childComponent.booleanValueFromParent = true;
     this.showChatbox = false;
   }
+  clickDailyRoutine() {
+    this.showDailyRoutine = true;
+    this.showDashaboard= false;
+  }
+
+  clickDashboard() {
+    this.showDailyRoutine = false;
+    this.showDashaboard= true;
+  }
+
+  getStyles() 
+  {
+    console.log("hIT sTYLE");
+    
+    return{
+    
+    'border-bottom:': this.showDailyRoutine ? '2px solid' :'none'  ,
+    'color': this.showDailyRoutine ? '#c6007e' : '#000'
+  }
+  }
+
 }
+
+

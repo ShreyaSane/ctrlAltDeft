@@ -54,6 +54,7 @@ import { LoginComponent } from './login/login.component';
 import { MaindashboardComponent } from './maindashboard/maindashboard.component';
 import { ConnectWithFamilyComponent } from './connect-with-family/connect-with-family.component';
 import { NotifyHospitalComponent } from './notify-hospital/notify-hospital.component';
+import { CallingComponent } from './calling/calling.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { NotifyHospitalComponent } from './notify-hospital/notify-hospital.compo
     LoginComponent,
     MaindashboardComponent,
     ConnectWithFamilyComponent,
-    NotifyHospitalComponent
+    NotifyHospitalComponent,
+    CallingComponent
   ],
   imports: [
     BrowserModule,

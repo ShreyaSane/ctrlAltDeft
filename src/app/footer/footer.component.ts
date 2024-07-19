@@ -51,6 +51,8 @@ onNotifyNF() {
   showChatbox = false;
   showFamilyContact =false;
   showNF = false;
+  showCalling = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -64,6 +66,10 @@ onNotifyNF() {
   }
   showNF1(){
     this.showNF = true;
+  }
+  
+  showCalling1() {
+    this.showCalling =  true;
   }
 
   toggleSlide() {
@@ -89,6 +95,10 @@ onNotifyNF() {
   toggleNF(){
     this.state = this.state === 'hidden' ? 'visible' : 'hidden'; 
     this.showNF = true;
+  }
+  onNotifyCalling() {
+    console.log("received..");
+    this.showCalling = false;
   }
 
 
