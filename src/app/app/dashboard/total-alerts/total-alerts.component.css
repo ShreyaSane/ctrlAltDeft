@@ -1,0 +1,134 @@
+.total-alert-frame-parent7f {
+	width: 472px;
+	box-shadow: 0 1px 4px #e6c8db, 0 1px 4px #fff3fb;
+	border-radius: 10px;
+	background-color: #fff;
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 16px
+}
+
+.total-alerts-parent {
+	align-self: stretch;
+	border-bottom: 1px solid #d8d8d8;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 20px;
+	gap: 10px
+}
+
+.total-alert-sandra-john-60-container {
+	position: relative;
+	line-height: 28px
+}
+
+.total-alert-b3 {
+	flex: 1;
+	position: relative;
+	line-height: 28px;
+	color: #c6007e
+}
+
+.total-alert-gearsix-icon {
+	width: 24px;
+	position: relative;
+	height: 24px;
+	overflow: hidden;
+	flex-shrink: 0
+}
+
+.total-alert-frame-parent13 {
+	width: 472px;
+	height: 196px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 0 2px;
+	box-sizing: border-box;
+	gap: 33px;
+	color: #c6007e
+}
+
+.total-alert-tabs-group {
+	align-self: stretch;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 10px
+}
+
+.total-alert-tabs3 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 5px
+}
+
+.total-alert-daily-routine-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px
+}
+
+.total-alert-daily-routine3 {
+	position: relative;
+	line-height: 28px;
+	opacity: .total-alert-7
+}
+
+.total-alert-tabs-item {
+	align-self: stretch;
+	position: relative;
+	border-radius: 10px 10px 0 0;
+	background-color: #c6007e;
+	height: 3px
+}
+
+.total-alert-tabs4 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	color: #000
+}
+
+.total-alert-tabs-child {
+	align-self: stretch;
+	position: relative;
+	border-radius: 10px 10px 0 0;
+	background-color: rgba(198, 0, 126, 0);
+	height: 3px
+}
+
+.total-alert-high-heart-rate-sandras-hear-wrapper {
+	width: 421px;
+	position: relative;
+	height: 112px;
+	color: #000
+}
+
+.total-alert-high-heart-rate-container1 {
+	flex: 1;
+	position: relative;
+	line-height: 28px
+}
+
+.total-alert-sandra-john-60-yrs {
+	margin: 0
+}
+
+.total-alert-sandra-john1 {
+	font-family: Roboto
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -6,6 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { ProfileComponentComponent } from '../profile-component/profile-component.component';
 import { AppointmentComponent } from '../appointment/appointment.component';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 
 interface Notification {
   id: number;
@@ -19,7 +20,7 @@ interface Notification {
 })
 export class ToolBarComponentComponent implements OnInit {
 
-  
+  @Output() dateChange = new EventEmitter<Date>();
   constructor(private breakpointObserver: BreakpointObserver , private snackBar: MatSnackBar , private dialog: MatDialog ){}
 
   ngOnInit(): void {
@@ -100,6 +101,13 @@ isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Ha
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed', result);
     });
+  }
+
+  onDateChange(event: MatDatepickerInputEvent<Date>) {
+    const selectedDate = event.value;
+    if (selectedDate) {
+      this.dateChange.emit(selectedDate);
+    }
   }
 
 }

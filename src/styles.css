@@ -1,10 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; background-color: white;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: white;}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .sidenav-container {
     height: 100%;
-    background-color: #ffffff; /* Set background color to white */
   }
   
   .sidenav {
@@ -14,13 +13,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
   }
   
   .mat-toolbar {
-    background-color: lightblue !important; /* Set toolbar background to white */
+    background-color: white !important; /* Set toolbar background to white */
     color: #000000 !important; /* Set toolbar text color to black */
   }
   
   .main-content {
     padding: 20px;
-    background-color: #ffffff; /* Set main content background to white */
+    background-color: #fff4fb; /* Set main content background to white */
     color: #000000 !important;
   }
   .mat-list-item{
@@ -34,3 +33,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
     height: 30px;
     margin-right: 8px;
   }
+  
+.mat-tab-label-content {
+  color: black !important;
+}
+.mat-tab-label-active .mat-tab-label-content {
+  color: #c6007e !important;
+}

@@ -6,9 +6,9 @@
     <span>Menu</span>
   </mat-toolbar>
   <mat-nav-list>
-    <a mat-list-item href="#">Link 1</a>
-    <a mat-list-item href="#">Link 2</a>
-    <a mat-list-item href="#">Link 3</a>
+    <a mat-list-item href="#">Edit Patient's routine</a>
+    <a mat-list-item href="#">Add special Event</a>
+    <a mat-list-item href="#">View Life Story Book</a>
   </mat-nav-list>
 </mat-sidenav>
 <mat-sidenav-content>
@@ -16,21 +16,21 @@
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>My Toolbar</span>
+    <span><img src="assets/logo.svg" class="logo" ></span>
     <span class="spacer"></span>
     <mat-menu #languageMenu="matMenu" >
         <button mat-menu-item (click)="toggleLanguage('English')">
-          <img src="assets/flags/us.png" alt="English" class="flag" >
+          <img src="assets/flags/Flag.svg" alt="English" class="flag" >
           English
         </button>
         <button mat-menu-item (click)="toggleLanguage('French')">
-          <img src="assets/flags/us.png" alt="French" class="flag" >
+          <img src="assets/flags/Flag.svg" alt="French" class="flag" >
           French
         </button>
       </mat-menu>
 
       <button mat-icon-button [matMenuTriggerFor]="languageMenu" >
-        <img src="assets/flags/us.png" alt="English" class="flag">
+        <img src="assets/flags/Flag.svg" alt="English" class="flag">
         {{ selectedLanguage.toUpperCase() }}
       </button>
 
@@ -55,15 +55,18 @@
   <!-- Add your main content here -->
   <div class="main-content">
     <app-cardbox></app-cardbox>
-    <mat-grid-list cols="6" rowHeight="600px" [gutterSize]="'3%'">
-      <mat-grid-tile colspan="5" style="background-color: lightblue;margin-left: 15px;">
+   <mat-grid-list cols="6"  style="width: 96.7%;">
+      <mat-grid-tile colspan="6" style="background-color: #fff4fb;margin-left: 15px; color: black;">
         <mat-tab-group >
-          <mat-tab label="Daily Routine" > <div class="tab-content"><mat-grid-list cols="1" ><mat-grid-tile >Daily Routine</mat-grid-tile></mat-grid-list></div></mat-tab>
-          <mat-tab label="Daily Routine" > <div class="tab-content"><mat-grid-list cols="1" ><mat-grid-tile >Daily Routine</mat-grid-tile></mat-grid-list></div></mat-tab>
-          <mat-tab label="Daily Routine" > <div class="tab-content"><mat-grid-list cols="1" ><mat-grid-tile >Daily Routine</mat-grid-tile></mat-grid-list></div></mat-tab>
+          <mat-tab label="Daily Routine" > <div class="tab-content"><app-scheduler style="width: 10%;"></app-scheduler></div></mat-tab>
+          <mat-tab label="DashBoard" > <div class="tab-content"><dashboard-new></dashboard-new></div></mat-tab>
+          <mat-tab label="Daily Routine" > <div class="tab-content"><update-routine></update-routine></div></mat-tab>
         </mat-tab-group>
       </mat-grid-tile>
-      <mat-grid-tile colspan="1" style="background-color: lightblue;"></mat-grid-tile>
-    </mat-grid-list>
+    </mat-grid-list> 
+    
+    
   </div>
+  <app-footer></app-footer>
+  
 </mat-sidenav-content>

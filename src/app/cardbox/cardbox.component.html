@@ -1,27 +1,51 @@
 <mat-grid-list cols="3" rowHeight="fit"  class="grid-container">
-    <mat-grid-tile>
-      <mat-card>
-        <img mat-card-image src="assets/profile.jpg" alt="Profile photo">
-        <mat-card-content>
-          <h2>{{ userName }}</h2>
-        </mat-card-content>
+    <mat-grid-tile colspan="1" >
+      <mat-card class="profile-card">
+        <mat-card-header style="padding-top: 2%;">
+          <div mat-card-avatar class="profile-photo" style="background-image: url('/assets/profile.svg');"></div>
+          <mat-card-title style="padding-top: 2%;">
+            Catherine Doe <span class="profile-age">85</span>
+          </mat-card-title>
+          <mat-card-subtitle style="padding-top: 2%;color: black;">Dementia Stage 4</mat-card-subtitle>
+        </mat-card-header>
       </mat-card>
     </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card>
+    <mat-grid-tile  colspan="2" >
+      <mat-card class="doctor-card">
         <mat-card-content>
-          <h2>Health Progress</h2>
-          <mat-progress-bar mode="determinate" [value]="healthProgress"></mat-progress-bar>
-          <span>{{ healthProgress }}%</span>
+          <div class="doctor-info">
+            <div class="left-section">
+              <div class="doctor-details">
+                <h3>{{ selectedDoctor.name }}</h3>
+                <p>Experience: {{ selectedDoctor.experience }} years</p>
+              </div>
+              <div class="more-doctors">
+                <button mat-button [matMenuTriggerFor]="doctorMenu" aria-label="Select Doctor">
+                  Number of doctors available: {{ doctors.length }}
+                </button>
+                <mat-menu #doctorMenu="matMenu" class="doctor-menu">
+                  <mat-menu-item *ngFor="let doctor of doctors" (click)="onDoctorSelect(doctor)">
+                    {{ doctor.name }}
+                  </mat-menu-item>
+                </mat-menu>
+              </div>
+            </div>
+            <div class="right-section">
+              <button mat-raised-button color="primary" (click)="openAppointmentDialog()">Schedule Appointment</button>
+            </div>
+          </div>
         </mat-card-content>
       </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card>
-        <mat-card-content>
-          <h2>Schedule Appointment</h2>
-          <button mat-raised-button color="primary" (click)="openAppointmentDialog()">Schedule</button>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
+  </mat-grid-tile>
   </mat-grid-list>
+
+  <ng-template #doctorDialog let-dialogRef>
+    <h1 mat-dialog-title>Doctor Details</h1>
+    <div mat-dialog-content>
+      <p>Details of the selected doctor.</p>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button (click)="dialogRef.close()">Close</button>
+    </div>
+  </ng-template>
+  

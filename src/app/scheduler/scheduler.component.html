@@ -1,14 +1,58 @@
-<mat-card>
-    <!-- <form [formGroup]="scheduleForm">
-      <mat-form-field appearance="fill">
-        <mat-label>Select Date</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="selectedDate">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-    </form>
+<div class="scheduler">
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input  matInput [matDatepicker]="picker" (dateChange)="onDateChange($event)">
+    <mat-datepicker-toggle  matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker  #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-card *ngFor="let schedule of schedules; let i = index" class="schedule-card">
+    <mat-card-header>
+      <mat-card-title>
+        {{ schedule.date }} - {{ schedule.time }}
+        <span class="task">Task: {{ schedule.tasks[0] }}</span>
+        <span><div class="partially-completed-parent"><div  class="status-label class=partially-completed">
+          {{ schedule.label }}
+        </div></div></span>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-icon-button (click)="schedule.expanded = !schedule.expanded">
+        <mat-icon>{{ schedule.expanded ? 'expand_less' : 'expand_more' }}</mat-icon>
+      </button>
+    </mat-card-actions>
+    <mat-card *ngIf="schedule.expanded" class="expanded-card">
+      <mat-card-header>
+        <mat-card-title>Schedule Details</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngFor="let detail of schedule.details" class="detail-item">
+          <div class="detail-activity">
+            <p>{{ detail.activity }}</p>
+          </div>
+          <div class="detail-tip">
+            <!-- <hr class="vertical-hr"> -->
+            <p><strong>Tip:</strong> {{ detail.tip }}</p>
+            <p><a href="{{ detail.youtubeLink }}" target="_blank">Watch on YouTube</a></p>
+          </div>
+          <hr class="horizontal-hr">
+        </div>
+        <!-- <hr class="horizontal-hr"> -->
+        <mat-card class="suggest-section">
+          <h3>Suggestions</h3>
+          <div *ngFor="let suggestion of schedule.suggestions" class="detail-item">
+            <div class="detail-activity">
+              <p>{{ suggestion.activity }}</p>
+            </div>
+            <div class="detail-tip">
+              <!-- <hr class="vertical-hr"> -->
+              <p><strong>Tip:</strong> {{ suggestion.tip }}</p>
+              <p><a href="{{ suggestion.youtubeLink }}" target="_blank">Watch on YouTube</a></p>
+            </div>
+            <!-- <hr class="horizontal-hr"> -->
+          </div>
+        </mat-card>
+      </mat-card-content>
+    </mat-card>
   </mat-card>
-  <div *ngFor="let schedule of filteredSchedules">
-    <mat-card [ngClass]="{ 'selected': schedule.isSelected }" (click)="toggleScheduleSelection(schedule)">
-      {{ schedule.time }}: {{ schedule.description }}-->
-    </mat-card> 
+  <update-routine *ngIf="showUpdateRoutine"></update-routine>
+</div>
