@@ -1,51 +1,63 @@
-<mat-grid-list cols="3" rowHeight="fit"  class="grid-container">
-    <mat-grid-tile colspan="1" >
-      <mat-card class="profile-card">
-        <mat-card-header style="padding-top: 2%;">
-          <div mat-card-avatar class="profile-photo" style="background-image: url('/assets/profile.svg');"></div>
-          <mat-card-title style="padding-top: 2%;">
-            Catherine Doe <span class="profile-age">85</span>
-          </mat-card-title>
-          <mat-card-subtitle style="padding-top: 2%;color: black;">Dementia Stage 4</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile  colspan="2" >
-      <mat-card class="doctor-card">
-        <mat-card-content>
-          <div class="doctor-info">
-            <div class="left-section">
-              <div class="doctor-details">
-                <h3>{{ selectedDoctor.name }}</h3>
-                <p>Experience: {{ selectedDoctor.experience }} years</p>
-              </div>
-              <div class="more-doctors">
-                <button mat-button [matMenuTriggerFor]="doctorMenu" aria-label="Select Doctor">
-                  Number of doctors available: {{ doctors.length }}
-                </button>
-                <mat-menu #doctorMenu="matMenu" class="doctor-menu">
-                  <mat-menu-item *ngFor="let doctor of doctors" (click)="onDoctorSelect(doctor)">
-                    {{ doctor.name }}
-                  </mat-menu-item>
-                </mat-menu>
-              </div>
-            </div>
-            <div class="right-section">
-              <button mat-raised-button color="primary" (click)="openAppointmentDialog()">Schedule Appointment</button>
-            </div>
-          </div>
-        </mat-card-content>
-      </mat-card>
-  </mat-grid-tile>
-  </mat-grid-list>
-
-  <ng-template #doctorDialog let-dialogRef>
-    <h1 mat-dialog-title>Doctor Details</h1>
-    <div mat-dialog-content>
-      <p>Details of the selected doctor.</p>
+<div class="frame-group">
+  <div class="man-438081-960-720-group">
+    <img alt="" class="man-438081-960-720-icon1" src="assets/profile.svg">
+    <div class="sandra-john-60-yrs-dementia-s-wrapper">
+      <div class="sandra-john-60-container">
+        <p class="sandra-john-60-yrs">
+          <span class="sandra-john">
+            <b class="sandra-john1">Sandra John</b>
+          </span>
+          <span>
+            <span class="sandra-john">, </span>
+            <span>60 yrs</span>
+          </span>
+        </p>
+        <p class="sandra-john-60-yrs">
+          <span>
+            <span>Dementia stage 4</span>
+          </span>
+        </p>
+      </div>
     </div>
-    <div mat-dialog-actions>
-      <button mat-button (click)="dialogRef.close()">Close</button>
+    <img alt="" class="caretdown-icon2" src="assets/Caretleft.svg">
+  </div>
+  <div class="frame-container">
+    <div class="frame-div">
+      <div class="dr-john-doe-15-yrs-experien-wrapper">
+        <div class="sandra-john-60-container">
+          <span class="dr-john-doe">
+            <b>Dr. John Doe </b>
+          </span>
+          <span class="yrs-experience">
+            <span class="dr-john-doe"></span>
+            <span>/ 15 yrs experience</span>
+          </span>
+        </div>
+      </div>
+      <div class="view-3-more-doctor-parent">
+        <div class="sandra-john-60-container">View 3 more doctor</div>
+        <img alt="" class="caretdown-icon" src="assets/CaretDown.svg">
+      </div>
     </div>
-  </ng-template>
-  
+    <div class="calendarcheck-parent">
+      <img alt="" class="gearsix-icon" src="assets/CalendarCheck.svg">
+      <div class="appointment">Appointment</div>
+    </div>
+  </div>
+  <div class="frame-parent1">
+    <div class="dr-john-doe-15-yrs-experien-wrapper">
+      <b class="sandra-john-60-container">4</b>
+    </div>
+    <div class="critical-alerts-wrapper">
+      <div class="sandra-john-60-container">Critical Alerts</div>
+    </div>
+  </div>
+  <div class="frame-parent2">
+    <div class="group-parent">
+      <img alt="" class="frame-item" src="assets/Group 422.svg">
+      <b class="b2">75%</b>
+    </div>
+    <div class="health-progress">Health progress</div>
+    <img alt="" class="caretdown-icon" src="assets/CaretDown.svg">
+  </div>
+</div>
