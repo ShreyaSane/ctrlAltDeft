@@ -10,7 +10,9 @@
       <mat-card-title>
         {{ schedule.date }} - {{ schedule.time }}
         <span class="task">Task: {{ schedule.tasks[0] }}</span>
-        <span> <button mat-flat-button (click)="completeActivity()">Complete</button></span>
+        <span><div class="partially-completed-parent"><div  class="status-label class=partially-completed">
+          {{ schedule.label }}
+        </div></div></span>
       </mat-card-title>
     </mat-card-header>
     <mat-card-actions>

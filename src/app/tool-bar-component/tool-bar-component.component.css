@@ -47,17 +47,6 @@
     margin-right: 8px;
   }
 
-  .custom-tab-group {
-    --mat-tab-text-color: black;
-  }
-  
-  .custom-tab-group .mat-tab-label-active {
-    color: black;
-  }
-  
-  .custom-tab-group .mat-tab-label {
-    color: black;
-  }
 .textindent-parent {
   display: flex;
   flex-direction: row;

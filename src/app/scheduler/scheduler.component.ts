@@ -14,8 +14,9 @@ export class SchedulerComponent implements OnChanges{
   schedules: any[] = [];
   allSchedules: any[] = [
     {
-      date: '2024-07-18',
+      date: '2024-07-19',
       time: '07:00 AM - 08:00 AM',
+      label: 'Partially Completed', color: 'orange',
       tasks: ['Task 1'],
       details: [
         { activity: 'Detail 1', tip: 'Tip 1', youtubeLink: 'https://www.youtube.com/watch?v=example1' },
@@ -28,8 +29,9 @@ export class SchedulerComponent implements OnChanges{
       ],
       expanded: false
     },{
-      date: '2024-07-18',
+      date: '2024-07-19',
       time: '08:00 AM - 09:00 AM',
+       label: 'Not Completed', color: 'red',
       tasks: ['Task 1'],
       details: [
         { activity: 'Detail 1', tip: 'Tip 1', youtubeLink: 'https://www.youtube.com/watch?v=example1' },
@@ -42,8 +44,9 @@ export class SchedulerComponent implements OnChanges{
       ],
       expanded: false
     },{
-      date: '2024-07-18',
+      date: '2024-07-19',
       time: '09:00 AM - 10:00 AM',
+      label: 'Completed', color: 'green',
       tasks: ['Task 1'],
       details: [
         { activity: 'Detail 1', tip: 'Tip 1', youtubeLink: 'https://www.youtube.com/watch?v=example1' },
@@ -59,6 +62,7 @@ export class SchedulerComponent implements OnChanges{
     {
       date: '2024-07-19',
       time: '11:00 AM',
+      label: 'Active', color: 'blue' ,
       tasks: ['Task 2'],
       details: [
         { activity: 'Workshop', tip: 'Bring laptop', youtubeLink: 'https://www.youtube.com/watch?v=example3' }
@@ -95,7 +99,7 @@ export class SchedulerComponent implements OnChanges{
   }
 
   
-    completeActivity() {
+    completeActivity(): void {
       this.showUpdateRoutine = true;
       console.log(this.showUpdateRoutine);
     }

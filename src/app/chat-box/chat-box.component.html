@@ -1,54 +1,58 @@
-    <div class="overlay">
-        <div ></div>
-        <div ><b class=need-quick-support>Need quick support?</b>
-            <div class=callbell-parent><img alt="" class=callbell-icon src=\..\..\assets\CallBell.svg>
-                <div class=frame-parent>
-                    <div class=chatdots-parent><img alt="" class=chatdots-icon src=\..\..\assets\ChatDots.svg> <b
-                            class=chat-with-our>Type your question here to get quick help!</b></div>
-                    <div class=frame-child></div><button  (click)="sendMessage()"><img alt="" class=chatdots-icon src=\..\..\assets\X.svg ></button>
-                </div>
-                <div class=frame-group>
-                    <div class=group-wrapper><img alt="" class=frame-item src="\..\..\assets\Frame 584.svg"></div>
-                    <div class=frame-container>
-                        <div class=it-is-a-long-establi-wrapper>
-                            <div class=it-is-a-container><b>Hello!</b> <span>I hope you are doing well.</span></div>
-                        </div>
-                        <div class=it-is-a-long-establi-container>
-                            <div class=it-is-a-container>How can I assist you today?
-                            </div>
-                        </div>
-                    </div>
-                  
-                </div>
-               <div #dynamicComponentContainer></div>
-                <div class=frame-group>
-                    <div class=group-frame><img alt="" class=frame-item src="\..\..\assets\Group 22.png"></div>
-                    <div class=frame-parent3>
-                        <div class=it-is-a-long-establi-wrapper2>
-                            <div class=it-is-a1>
-                                
-
-                                <textarea  [(ngModel)]="inputValue"  id="prompt-textarea" tabindex="0" data-id="root"  rows="1" placeholder="Type your message here" style="height: 40px; overflow-y: hidden;"></textarea>
-                           <button (click)="createComponent()" >Send</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class=frame-parent4>
-                    <div class=user-parent>
-                        <div class=live-agent>Live Agent</div>
-                    </div>
-                    <div class=fileplus-parent>
-                        <div class=live-agent>Create ticket</div>
-                    </div>
-                    <div class=user-group>
-                        <div class=live-agent1>Live Agent</div>
-                    </div>
-                    <div class=chattext-parent>
-                        <div class=live-agent>Post on live forum</div>
-                    </div>
-                </div>
-            </div>
+<div class="overlay">
+    <div style="width:100%;">
+      <b class="need-quick-support">Need quick support?</b>
+      <div class="callbell-parent">
+        <img alt="" class="callbell-icon" src="../../../assets/CallBell.svg">
+        <div class="frame-parent">
+          <div class="chatdots-parent">
+            <img alt="" class="chatdots-icon" src="../../../assets/ChatDots.svg">
+            <b class="chat-with-our">Type your question here to get quick help!</b>
+          </div>
+          <div class="frame-child"></div>
+          <button (click)="sendMessage()" style="background: none;cursor: pointer;border: none;">
+            <img alt="" class="chatdots-icon" src="../../../assets/X.svg">
+          </button>
         </div>
+        <div class="frame-group">
+          <div class="group-wrapper">
+            <img alt="" class="frame-item" src="../../../assets/Frame 584.svg">
+          </div>
+          <div class="frame-container">
+            <div class="it-is-a-long-establi-wrapper">
+              <div class="it-is-a-container">
+                <b>Hello!</b>
+                <span>I hope you are doing well.</span>
+              </div>
+            </div>
+            <div class="it-is-a-long-establi-container">
+              <div class="it-is-a-container">How can I assist you today?</div>
+            </div>
+          </div>
+        </div>
+        <div #dynamicComponentContainer></div>
+        <div class="frame-group">
+          <div class="group-frame">
+            <img alt="" class="frame-item" src="../../../assets/Group 22.png">
+          </div>
+            </div>
+        <div class="frame-parent4">
+          <textarea 
+                  [(ngModel)]="inputValue" 
+                  id="prompt-textarea" 
+                  tabindex="0" 
+                  data-id="root" 
+                  rows="1" 
+                  placeholder="Type your message here" 
+                  class="message-textarea">
+                </textarea>
+                <button 
+                  mat-raised-button 
+                  color="primary" 
+                  (click)="createComponent()">
+                  Send
+                </button>
+        </div>
+      </div>
     </div>
+  </div>
+  

@@ -73,3 +73,50 @@
   .mat-datepicker-toggle{
     color:red;
  }
+
+ .status-label {
+  padding: 10px;
+  margin: 5px 0;
+  color: white; /* Assuming a light text color for dark backgrounds */
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}mat-card-title.mat-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.partially-completed {
+  position: relative;
+  letter-spacing: 1px;
+  text-transform: uppercase
+}
+
+.partially-completed-parent {
+  height: 100%;
+  position: relative;
+  border-radius: 30px;
+  background-color: #fff4d9;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 14px;
+  color: #774700;
+  font-family: Roboto
+}
+mat-card-title.mat-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.partially-completed-parent {
+  background-color: lightpink;
+}

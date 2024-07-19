@@ -37,6 +37,7 @@ export class FooterComponent implements OnInit {
     this.state = this.state === 'hidden' ? 'visible' : 'hidden';
     this.showChatbox = true;
   }
+  
   onNotify(message: string) {
     console.log("received..");
     this.showChatbox = false;
