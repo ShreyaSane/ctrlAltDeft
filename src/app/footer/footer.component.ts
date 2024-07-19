@@ -23,9 +23,14 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class FooterComponent implements OnInit {
+onNotifyNF() {
+  console.log("received..");
+  this.showNF = false;
+}
   state = 'hidden';
   showChatbox = false;
   showFamilyContact =false;
+  showNF = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -36,6 +41,9 @@ export class FooterComponent implements OnInit {
 
   showFamilyContact1(){
     this.showFamilyContact = true;
+  }
+  showNF1(){
+    this.showNF = true;
   }
 
   toggleSlide() {
@@ -56,6 +64,11 @@ export class FooterComponent implements OnInit {
   onNotifyFromFamilyContact() {
     console.log("received..");
     this.showFamilyContact = false;
+  }
+
+  toggleNF(){
+    this.state = this.state === 'hidden' ? 'visible' : 'hidden'; 
+    this.showNF = true;
   }
 
 

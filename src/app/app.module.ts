@@ -53,6 +53,7 @@ import { DashboardNewComponent } from './dashboard-new/dashboard-new.component';
 import { LoginComponent } from './login/login.component';
 import { MaindashboardComponent } from './maindashboard/maindashboard.component';
 import { ConnectWithFamilyComponent } from './connect-with-family/connect-with-family.component';
+import { NotifyHospitalComponent } from './notify-hospital/notify-hospital.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { ConnectWithFamilyComponent } from './connect-with-family/connect-with-f
     DashboardNewComponent,
     LoginComponent,
     MaindashboardComponent,
-    ConnectWithFamilyComponent
+    ConnectWithFamilyComponent,
+    NotifyHospitalComponent
   ],
   imports: [
     BrowserModule,

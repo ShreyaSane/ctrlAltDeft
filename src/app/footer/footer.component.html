@@ -23,7 +23,7 @@
         </div>
         <div class=frame-child5></div>
         <div class=chatdots-parent><img alt="" class="callbell-icon" src=..\..\assets\CallBell.svg> <img alt=""
-                class=chatdots-icon src=..\..\assets\BellSimpleRinging.svg>
+                class="chatdots-icon,clickable" src=..\..\assets\BellSimpleRinging.svg (click)="showNF1()">
             <div class=daily-routine>
                 <p class=sandra-john-60-yrs>Emergency alarm to
                 <p class=sandra-john-60-yrs>notify nearby hospital
@@ -45,3 +45,4 @@
 
 <app-chat-box   *ngIf="showChatbox"  (notifyParent)="onNotify($event)"></app-chat-box>
 <app-connect-with-family *ngIf="showFamilyContact"  (notifyParent)="onNotifyFromFamilyContact()"></app-connect-with-family>
+<app-notify-hospital *ngIf="showNF"  (notifyParent)="onNotifyNF()"></app-notify-hospital>
