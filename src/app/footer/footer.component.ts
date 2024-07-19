@@ -25,12 +25,17 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   state = 'hidden';
   showChatbox = false;
+  showFamilyContact =false;
   constructor() { }
 
   ngOnInit(): void {
   }
   showChatBox(){
     this.showChatbox = true;
+  }    
+
+  showFamilyContact1(){
+    this.showFamilyContact = true;
   }
 
   toggleSlide() {
@@ -42,5 +47,16 @@ export class FooterComponent implements OnInit {
     console.log("received..");
     this.showChatbox = false;
   }
+
+  toggleFamilyContact() {
+    this.state = this.state === 'hidden' ? 'visible' : 'hidden'; 
+    this.showFamilyContact = true;
+  }
+
+  onNotifyFromFamilyContact() {
+    console.log("received..");
+    this.showFamilyContact = false;
+  }
+
 
 }

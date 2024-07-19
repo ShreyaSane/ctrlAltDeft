@@ -52,6 +52,7 @@ import { DashboardComponent } from './app/dashboard/dashboard.component';
 import { DashboardNewComponent } from './dashboard-new/dashboard-new.component';
 import { LoginComponent } from './login/login.component';
 import { MaindashboardComponent } from './maindashboard/maindashboard.component';
+import { ConnectWithFamilyComponent } from './connect-with-family/connect-with-family.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { MaindashboardComponent } from './maindashboard/maindashboard.component'
     DashboardComponent,
     DashboardNewComponent,
     LoginComponent,
-    MaindashboardComponent
+    MaindashboardComponent,
+    ConnectWithFamilyComponent
   ],
   imports: [
     BrowserModule,
